@@ -1,23 +1,70 @@
-#navbar {
-  background-color: #f2f3ec;
+:root {
+  /* Color */
+  --color-black: #2c2a2c;
+  --color-font: #5a575c;
+  --color-nav: #f4f3ed;
 }
 
-.New__menu__bg{
-  background-image: url('image/new__menu/2021_summer2_bg.jpeg');
+/* navbar */
+.navbar {
+  background-color: var(--color-nav);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  margin-left: 15px;
+}
+
+.nav__content {
+  color: var(--color-font);
+}
+
+.small__nav {
+  display: flex;
+  position: relative;
+  right: -200px;
+  list-style: none;
+  font-size: 14px;
+}
+
+.small__nav__items {
+  padding-left: 15px;
+  padding-right: 15px;
+  /* border-right: solid 1px  black; */
+  /* 검색창 추가 */
+}
+
+.main__nav {
+  display: flex;
+  list-style: none;
+  font-size: 14px;
+}
+
+.main__nav__items {
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.New__menu__bg {
+  background-image: url("image/new__menu/2021_summer2_bg.jpeg");
   height: 646px;
 }
 
-.Papua__coffee__bg{
+.Papua__coffee__bg {
   background-image: url("image/Papua__coffee/2021_summer2_bean_bg.jpeg");
   height: 571px;
 }
 
-.Brazil__coffee__half__bg{
+.Brazil__coffee__half__bg {
   background-image: url("image/Brazil__coffee/reserve_sundried_brazil_bean4_1.png");
   height: 392px;
 }
 
-.Pick__menu__bg{
+.Pick__menu__bg {
   background-image: url("image/Pick__menu/fav_prod_bg_new.jpg");
   height: 790px;
 }

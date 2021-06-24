@@ -1,24 +1,29 @@
 :root {
   /* Color */
   --color-black: #2c2a2c;
+  --color-red: #ca0010;
   --color-font: #5a575c;
   --color-nav: #f4f3ed;
 }
 
+/* 가장 큰 창 기준으로 설정 후 조정 */
 /* navbar */
 .navbar {
   background-color: var(--color-nav);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top: solid 2px black;
 }
 
 .nav__logo {
-  margin-left: 15px;
+  margin-left: 145px;
 }
 
 .nav__content {
   color: var(--color-font);
+  margin-right: 130px;
+  /* 나중에 body전체에 적용해보고 되는지 확인하기 */
 }
 
 .small__nav {
@@ -49,11 +54,83 @@
   margin-bottom: 20px;
 }
 
+/* Main */
+/* New__menu */
+.New__menu__container {
+  position: relative;
+}
+
+.New__menu__slogan,
+.New__menu__btn,
+.New__menu__frappuccino,
+.New__menu__blended,
+.New__menu__tea {
+  position: absolute;
+}
+
 .New__menu__bg {
   background-image: url("image/new__menu/2021_summer2_bg.jpeg");
   height: 646px;
+  background-position: 50% top;
 }
 
+.New__menu__slogan {
+  top: 70px;
+  left: 180px;
+}
+
+.New__menu__btn {
+  top: 240px;
+  left: 290px;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 9px 23px;
+  font-size: 16px;
+  border: solid 2px var(--color-black);
+}
+
+.New__menu__btn:hover {
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.New__menu__frappuccino {
+  top: 170px;
+  left: 520px;
+}
+
+.New__menu__frappuccino__intro {
+  left: -250px;
+  top: 270px;
+}
+
+.New__menu__blended {
+  top: 110px;
+  left: 760px;
+}
+
+.New__menu__blended__intro {
+  left: -25px;
+  top: 360px;
+}
+
+.New__menu__tea {
+  top: 180px;
+  left: 990px;
+}
+
+.New__menu__tea__intro {
+  left: -20px;
+  top: 340px;
+}
+
+.New__menu__frappuccino__intro,
+.New__menu__blended__intro,
+.New__menu__tea__intro {
+  position: absolute;
+}
+
+/* Papua__coffee */
 .Papua__coffee__bg {
   background-image: url("image/Papua__coffee/2021_summer2_bean_bg.jpeg");
   height: 571px;

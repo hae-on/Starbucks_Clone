@@ -2,8 +2,13 @@
   /* Color */
   --color-black: #2c2a2c;
   --color-red: #ca0010;
+  --color-dark-white: #f4f3ec;
+  --color-green: #172b25;
+
+  /* 요소 */
   --color-font: #5a575c;
   --color-nav: #f4f3ed;
+  --color-notice: #0e0e0e;
 }
 
 /* 가장 큰 창 기준으로 설정 후 조정 */
@@ -128,6 +133,60 @@
 .New__menu__blended__intro,
 .New__menu__tea__intro {
   position: absolute;
+}
+
+/* Notice */
+.Notice__banner,
+.Notice__promo {
+  width: 50%;
+  float: left;
+  height: 40px;
+  padding: 15px 0;
+}
+
+.Notice__banner {
+  background-color: var(--color-notice);
+  color: white;
+}
+
+.Notice__promo {
+  background-color: var(--color-dark-white);
+  color: var(--color-font);
+}
+
+.Notice__banner__title {
+  font-size: 20px;
+  margin-left: 250px;
+}
+
+.Notice__banner__content {
+  margin-left: 20px;
+}
+
+.Notice__banner__btn {
+  color: var(--color-dark-white);
+  border: solid 1px var(--color-dark-white);
+  margin-left: 85px;
+}
+
+.Notice__banner__btn,
+.Notice__promo__btn {
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.Notice__promo__title {
+  margin-left: 80px;
+  font-size: 19px;
+  font-weight: 550;
+}
+
+.Notice__promo__btn {
+  border: solid 1px var(--color-black);
+  margin-left: 60px;
 }
 
 /* Papua__coffee */

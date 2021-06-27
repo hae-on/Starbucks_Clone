@@ -46,7 +46,8 @@
   margin-top: 18px;
 }
 
-.small__nav__items {
+.small__nav__items,
+.small__nav__itemsss {
   cursor: pointer;
   padding-left: 18px;
   padding-right: 18px;
@@ -65,7 +66,6 @@
 
 .small__nav__items:last-child::after {
   content: none;
-  /* 돋보기 앞에 있는 애도 지워야함 */
 }
 
 .small__nav__items:hover {
@@ -320,7 +320,7 @@
 
 .Rewards__content__gift__content {
   font-size: 15px;
-  padding: -10px;
+  /* 자간 고치기 */
 }
 
 /* Papua__coffee */

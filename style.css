@@ -14,6 +14,7 @@
   --color-nav: #f4f3ed;
   --color-notice: #0e0e0e;
   --color-line: #787878;
+  --color-papua: #046575;
 
   /* border-radius */
   --borer-radius-regular: 5px;
@@ -26,9 +27,11 @@
   padding: 9px 23px;
   cursor: pointer;
   color: white;
+  font-size: 15px;
 }
 
-.transparent__btn:hover {
+/* 버튼 효과주기 */
+.button:hover {
   text-decoration: underline;
 }
 
@@ -273,7 +276,6 @@
   margin-bottom: 35px;
 }
 
-/* 버튼 중복 요소 없앨 것 */
 .question__btns {
   position: absolute;
   right: 200px;
@@ -282,20 +284,17 @@
 
 .join__btn {
   background-color: var(--color-green);
-  font-size: 15px;
   border: none;
   margin-right: 6px;
 }
 
 .login__btn {
   background-color: transparent;
-  font-size: 15px;
   border: solid 2px white;
   padding: 7px 23px;
 }
 
 .e-gift__btn {
-  font-size: 15px;
   border: solid 2px white;
   position: relative;
   right: -30px;
@@ -313,13 +312,55 @@
 
 .e-gift__content {
   font-size: 15px;
-  /* 자간 고치기 */
+  display: inline-block;
 }
 
 /* Papua__coffee */
 .Papua__coffee__bg {
   background-image: url("image/Papua__coffee/2021_summer2_bean_bg.jpeg");
   height: 571px;
+  background-position: 50% top;
+}
+
+.Papua__coffee__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Papua__coffee__img {
+  margin-top: 80px;
+  margin-right: 110px;
+}
+
+.Papua__coffee__mini__title {
+  color: #0c90a8;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.Papua__coffee__title {
+  color: var(--color-papua);
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.Papua__coffee__intro {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-font);
+}
+
+.Papua__coffee__btn {
+  color: var(--color-papua);
+  border: 2px solid var(--color-papua);
+}
+
+.Papua__coffee__btn:hover {
+  background-color: var(--color-papua);
+  color: white;
 }
 
 .Brazil__coffee__half__bg {

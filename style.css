@@ -19,6 +19,19 @@
   --borer-radius-regular: 5px;
 }
 
+/* 재사용 */
+.button {
+  background-color: transparent;
+  border-radius: var(--borer-radius-regular);
+  padding: 9px 23px;
+  cursor: pointer;
+  color: white;
+}
+
+.transparent__btn:hover {
+  text-decoration: underline;
+}
+
 /* navbar */
 .navbar {
   background-color: var(--color-nav);
@@ -47,7 +60,7 @@
 }
 
 .small__nav__items,
-.small__nav__itemsss {
+.small__nav__no-line {
   cursor: pointer;
   padding-left: 18px;
   padding-right: 18px;
@@ -109,9 +122,9 @@
 
 .New__menu__slogan,
 .New__menu__btn,
-.New__menu__frappuccino,
-.New__menu__blended,
-.New__menu__tea {
+.frappuccino,
+.blended,
+.tea {
   position: absolute;
 }
 
@@ -129,51 +142,48 @@
 .New__menu__btn {
   top: 240px;
   left: 290px;
-  background-color: transparent;
-  border-radius: var(--borer-radius-regular);
-  padding: 9px 23px;
   font-size: 16px;
   border: solid 2px var(--color-black);
+  color: var(--color-black);
 }
 
 .New__menu__btn:hover {
-  text-decoration: underline;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.New__menu__frappuccino {
+.frappuccino {
   top: 170px;
   left: 520px;
 }
 
-.New__menu__frappuccino__intro {
+.frappuccino__intro {
   left: -250px;
   top: 270px;
 }
 
-.New__menu__blended {
+.blended {
   top: 110px;
   left: 760px;
 }
 
-.New__menu__blended__intro {
+.blended__intro {
   left: -25px;
   top: 360px;
 }
 
-.New__menu__tea {
+.tea {
   top: 180px;
   left: 990px;
 }
 
-.New__menu__tea__intro {
+.tea__intro {
   left: -20px;
   top: 340px;
 }
 
-.New__menu__frappuccino__intro,
-.New__menu__blended__intro,
-.New__menu__tea__intro {
+.frappuccino__intro,
+.blended__intro,
+.tea__intro {
   position: absolute;
 }
 
@@ -252,64 +262,47 @@
   width: 176px;
 }
 
-.Rewards__content {
+.question {
   color: white;
   margin-left: 50px;
 }
 
-.Rewards__content__question__content {
+.answer__content {
   font-size: 19px;
   font-weight: 500;
   margin-bottom: 35px;
 }
 
 /* 버튼 중복 요소 없앨 것 */
-.Rewards__content__question__btns {
+.question__btns {
   position: absolute;
   right: 200px;
   top: 80px;
 }
-.Rewards__content__question__btns__join {
-  cursor: pointer;
+
+.join__btn {
   background-color: var(--color-green);
-  color: white;
   font-size: 15px;
-  padding: 10px 20px;
-  border-radius: var(--borer-radius-regular);
   border: none;
   margin-right: 6px;
 }
 
-.Rewards__content__question__btns__login {
-  cursor: pointer;
+.login__btn {
   background-color: transparent;
-  color: white;
   font-size: 15px;
-  padding: 7px 20px;
-  border-radius: var(--borer-radius-regular);
   border: solid 2px white;
+  padding: 7px 23px;
 }
 
-.Rewards__content__gift__btn {
-  cursor: pointer;
-  background-color: transparent;
-  color: white;
+.e-gift__btn {
   font-size: 15px;
-  padding: 7px 20px;
-  border-radius: var(--borer-radius-regular);
   border: solid 2px white;
   position: relative;
   right: -30px;
   top: -15px;
 }
 
-.Rewards__content__question__btns__join:hover,
-.Rewards__content__question__btns__login:hover,
-.Rewards__content__gift__btn:hover {
-  text-decoration: underline;
-}
-
-.Rewards__content__gift::before {
+.e-gift::before {
   content: " ";
   position: absolute;
   background-color: var(--color-line);
@@ -318,7 +311,7 @@
   top: 143px;
 }
 
-.Rewards__content__gift__content {
+.e-gift__content {
   font-size: 15px;
   /* 자간 고치기 */
 }

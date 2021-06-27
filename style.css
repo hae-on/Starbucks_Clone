@@ -3,17 +3,22 @@
   --color-black: #2c2a2c;
   --color-light-grey: #c2c2c2;
   --color-dark-white: #f4f3ec;
+
   --color-red: #ca0010;
   --color-light-green: #578f00;
-  --color-green: #172b25;
+  --color-green: #0c5f3a;
+  --color-dark-green: #172b25;
 
   /* 요소 */
   --color-font: #5a575c;
   --color-nav: #f4f3ed;
   --color-notice: #0e0e0e;
+  --color-line: #787878;
+
+  /* border-radius */
+  --borer-radius-regular: 5px;
 }
 
-/* 가장 큰 창 기준으로 설정 후 조정 */
 /* navbar */
 .navbar {
   background-color: var(--color-nav);
@@ -31,9 +36,6 @@
   color: var(--color-font);
   margin-right: 130px;
 }
-/* 
-왼쪽 선 after poab le top wi hei bagr
-a 기준으로 Relati li ~ li a::after */
 
 .small__nav {
   display: flex;
@@ -45,12 +47,10 @@ a 기준으로 Relati li ~ li a::after */
 }
 
 .small__nav__items {
-  /* 돋보기는 왜 안 되는가 */
   cursor: pointer;
   padding-left: 18px;
   padding-right: 18px;
   height: 20px;
-  /* border-right: solid 1px  black; */
   /* 검색창 추가 */
 }
 
@@ -65,6 +65,7 @@ a 기준으로 Relati li ~ li a::after */
 
 .small__nav__items:last-child::after {
   content: none;
+  /* 돋보기 앞에 있는 애도 지워야함 */
 }
 
 .small__nav__items:hover {
@@ -129,7 +130,7 @@ a 기준으로 Relati li ~ li a::after */
   top: 240px;
   left: 290px;
   background-color: transparent;
-  border-radius: 5px;
+  border-radius: var(--borer-radius-regular);
   padding: 9px 23px;
   font-size: 16px;
   border: solid 2px var(--color-black);
@@ -177,10 +178,13 @@ a 기준으로 Relati li ~ li a::after */
 }
 
 /* Notice */
+.Notice__container {
+  display: flex;
+}
+
 .Notice__banner,
 .Notice__promo {
   width: 50%;
-  float: left;
   height: 40px;
   padding: 15px 0;
 }
@@ -228,6 +232,95 @@ a 기준으로 Relati li ~ li a::after */
 .Notice__promo__btn {
   border: solid 1px var(--color-black);
   margin-left: 60px;
+}
+
+/* Rewards  */
+#Rewards {
+  background-color: var(--color-dark-green);
+  height: 230px;
+  position: relative;
+}
+
+.Rewards__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.Rewards__logo img {
+  width: 176px;
+}
+
+.Rewards__content {
+  color: white;
+  margin-left: 50px;
+}
+
+.Rewards__content__question__content {
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+/* 버튼 중복 요소 없앨 것 */
+.Rewards__content__question__btns {
+  position: absolute;
+  right: 200px;
+  top: 80px;
+}
+.Rewards__content__question__btns__join {
+  cursor: pointer;
+  background-color: var(--color-green);
+  color: white;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: var(--borer-radius-regular);
+  border: none;
+  margin-right: 6px;
+}
+
+.Rewards__content__question__btns__login {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-size: 15px;
+  padding: 7px 20px;
+  border-radius: var(--borer-radius-regular);
+  border: solid 2px white;
+}
+
+.Rewards__content__gift__btn {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-size: 15px;
+  padding: 7px 20px;
+  border-radius: var(--borer-radius-regular);
+  border: solid 2px white;
+  position: relative;
+  right: -30px;
+  top: -15px;
+}
+
+.Rewards__content__question__btns__join:hover,
+.Rewards__content__question__btns__login:hover,
+.Rewards__content__gift__btn:hover {
+  text-decoration: underline;
+}
+
+.Rewards__content__gift::before {
+  content: " ";
+  position: absolute;
+  background-color: var(--color-line);
+  height: 1px;
+  width: 755px;
+  top: 143px;
+}
+
+.Rewards__content__gift__content {
+  font-size: 15px;
+  padding: -10px;
 }
 
 /* Papua__coffee */

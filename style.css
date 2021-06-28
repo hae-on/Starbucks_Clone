@@ -15,6 +15,9 @@
   --color-notice: #0e0e0e;
   --color-line: #787878;
   --color-papua: #046575;
+  --color-brazil-bg: #e7c7a1;
+  --color-brazil: #7f522d;
+  --color-footer: #2b2928;
 
   /* border-radius */
   --borer-radius-regular: 5px;
@@ -363,12 +366,207 @@
   color: white;
 }
 
+/* Brazil__coffee */
 .Brazil__coffee__half__bg {
   background-image: url("image/Brazil__coffee/reserve_sundried_brazil_bean4_1.png");
   height: 392px;
+  background-color: var(--color-brazil-bg);
+  background-position: 50% top;
+  position: relative;
 }
 
+.Brazil__coffee__title {
+  position: absolute;
+  top: 95px;
+  left: 160px;
+}
+
+.Brazil__coffee__btn {
+  position: absolute;
+  top: 270px;
+  left: 430px;
+  color: var(--color-brazil);
+  border: solid 2px var(--color-brazil);
+}
+
+.Brazil__coffee__btn:hover {
+  background-color: var(--color-brazil);
+  color: white;
+}
+
+/* Pick__menu */
 .Pick__menu__bg {
   background-image: url("image/Pick__menu/fav_prod_bg_new.jpg");
   height: 790px;
+  background-attachment: fixed;
+  background-position: 75% top;
+  position: relative;
+}
+
+.Pick__menu__txt {
+  position: relative;
+  top: 130px;
+  left: 200px;
+}
+
+.Pick__menu__content {
+  position: absolute;
+  left: -100px;
+  bottom: -160px;
+}
+
+.Pick__menu__img {
+  position: absolute;
+  top: -10px;
+  right: 200px;
+}
+
+.Pick__menu__btn {
+  position: relative;
+  top: 240px;
+  left: 140px;
+  border: solid 2px white;
+}
+
+.Pick__menu__btn:hover {
+  background-color: white;
+  color: var(--color-font);
+}
+
+/* Reserve */
+
+#Reserve {
+  height: 700px;
+  width: 100%;
+  position: relative;
+}
+
+.Reserve__img::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color-line);
+  height: 1px;
+  width: 70%;
+  top: 59%;
+  right: 50px;
+}
+
+.Reserve__img img {
+  position: absolute;
+  margin-top: 90px;
+  margin-left: 140px;
+  width: 450px;
+}
+
+.Reserve__img::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-line);
+  height: 60%;
+  width: 1px;
+  top: 130px;
+  left: 44%;
+}
+
+.Reserve__title {
+  position: relative;
+  top: 250px;
+  left: 668px;
+}
+
+.Reserve__btn {
+  position: relative;
+  top: 340px;
+  left: 650px;
+  border: none;
+}
+
+.Reserve__btn :hover {
+  /* 그림자 현상으로 인한 오류 내 마음대로 바꾸기 */
+  /* background-color: black; */
+  /* position: relative; */
+}
+
+/* Store */
+.Store__bg__img {
+  position: relative;
+  height: 430px;
+  background-color: #e6e6e6;
+}
+
+.Store__img__big {
+  position: relative;
+  top: -107px;
+  left: 150px;
+}
+
+.Store__img__small {
+  position: relative;
+  top: -280px;
+  left: 370px;
+}
+
+.Store__bg__img__coffee {
+  position: absolute;
+  left: 530px;
+  top: -40px;
+  /* 넘어가는 애 처리하기 (overflow 안 먹음) */
+}
+
+.Store__bg__img__house {
+  position: relative;
+  left: 80%;
+  top: 76%;
+}
+
+.Store__title {
+  position: absolute;
+  top: 130px;
+  left: 850px;
+}
+
+.Store__content {
+  position: absolute;
+  top: 200px;
+  left: 850px;
+}
+
+.Store__btn {
+  position: absolute;
+  left: 860px;
+  top: 290px;
+  color: var(--color-font);
+  padding: 9px 28px;
+  font-size: 17px;
+}
+
+.Store__btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* footer */
+.footer {
+  background-color: var(--color-footer);
+  height: 600px;
+}
+
+.footer__list {
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  line-height: 1.7;
+  padding-top: 50px;
+}
+
+.company,
+.corpor,
+.community,
+.partner,
+.recquit {
+  margin: 0;
+  list-style: none;
+  margin-right: 80px;
 }

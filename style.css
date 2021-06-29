@@ -5,6 +5,7 @@
   --color-dark-white: #f4f3ec;
 
   --color-red: #ca0010;
+  --color-more-light-green: #16b349;
   --color-light-green: #578f00;
   --color-green: #0c5f3a;
   --color-dark-green: #172b25;
@@ -559,6 +560,7 @@
   justify-content: center;
   line-height: 1.7;
   padding-top: 50px;
+  cursor: pointer;
 }
 
 .company,
@@ -569,4 +571,107 @@
   margin: 0;
   list-style: none;
   margin-right: 80px;
+}
+
+.company__title,
+.corpor__title,
+.community__title,
+.partner__title,
+.recquit__title {
+  margin-bottom: 10px;
+}
+
+.company__title:hover,
+.corpor__title:hover,
+.community__title:hover,
+.partner__title:hover,
+.recquit__title:hover {
+  text-decoration: underline;
+}
+
+.company__list:hover,
+.corpor__list:hover,
+.community__list:hover,
+.partner__list:hover,
+.recquit__list:hover {
+  text-decoration: underline;
+}
+
+.footer__banner {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  cursor: pointer;
+}
+
+.terms__and__conditions {
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.tac__list {
+  margin-left: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.tac__list:hover {
+  text-decoration: underline;
+}
+
+.tac__list__green {
+  color: var(--color-more-light-green);
+  cursor: pointer;
+}
+
+.tac__list__green:hover {
+  text-decoration: underline;
+}
+
+.tac__list::before {
+  content: "";
+  position: absolute;
+  height: 13px;
+  width: 1px;
+  background-color: var(--color-line);
+  margin-right: 30px;
+  left: -13px;
+}
+
+.footer__btns {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.footer__btn {
+  border: solid 2px white;
+  font-size: 13px;
+  margin-left: 10px;
+  padding: 7px 20px;
+}
+
+.footer__info {
+  display: flex;
+  justify-content: center;
+  color: var(--color-line);
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+.info__list {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.footer__rights {
+  display: flex;
+  justify-content: center;
+  color: var(--color-line);
+  font-size: 13px;
 }

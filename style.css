@@ -10,7 +10,7 @@
   --color-green: #0c5f3a;
   --color-dark-green: #172b25;
 
-  /* 요소 */
+  /* 요소 color */
   --color-font: #5a575c;
   --color-nav: #f4f3ed;
   --color-notice: #0e0e0e;
@@ -20,8 +20,17 @@
   --color-brazil: #7f522d;
   --color-footer: #2b2928;
 
-  /* border-radius */
+  /* Border-radius */
   --borer-radius-regular: 5px;
+
+  /* Animation */
+  --animation-duration: 300ms;
+
+  /* Font weight */
+  --weight-more-bold: 700;
+  --weight-bold: 600;
+  --weight-semi-bold: 500;
+  --weight-regular: 400;
 }
 
 /* 재사용 */
@@ -32,11 +41,13 @@
   cursor: pointer;
   color: white;
   font-size: 15px;
+  transition: all var(--animation-duration) ease;
 }
 
 /* 버튼 효과주기 */
 .button:hover {
   text-decoration: underline;
+  /* transition: all var(--animation-duration) ease; */
 }
 
 /* navbar */
@@ -127,6 +138,7 @@
   position: fixed;
   right: 20px;
   top: 180px;
+  z-index: 999;
 }
 
 .badge img {
@@ -156,6 +168,8 @@
   top: 70px;
   left: 180px;
 }
+
+/* keyframes css opacity fade in 검색 */
 
 .New__menu__btn {
   top: 240px;
@@ -287,7 +301,7 @@
 
 .answer__content {
   font-size: 19px;
-  font-weight: 500;
+  font-weight: var(--weight-semi-bold);
   margin-bottom: 35px;
 }
 
@@ -351,20 +365,20 @@
 .Papua__coffee__mini__title {
   color: #0c90a8;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: var(--weight-more-bold);
   margin: 0;
 }
 
 .Papua__coffee__title {
   color: var(--color-papua);
   font-size: 35px;
-  font-weight: 700;
+  font-weight: var(--weight-more-bold);
   margin: 0;
 }
 
 .Papua__coffee__intro {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: var(--weight-semi-bold);
   color: var(--color-font);
 }
 
@@ -565,7 +579,7 @@
 
 .footer__list {
   color: white;
-  font-weight: 400;
+  font-weight: var(--weight-regular);
   font-size: 14px;
   display: flex;
   justify-content: center;
@@ -617,7 +631,7 @@
 
 .terms__and__conditions {
   color: white;
-  font-weight: 400;
+  font-weight: var(--weight-regular);
   font-size: 12px;
   list-style: none;
   display: flex;

@@ -122,6 +122,17 @@
 }
 
 /* Main */
+/* Badge */
+.badge {
+  position: fixed;
+  right: 20px;
+  top: 180px;
+}
+
+.badge img {
+  width: 140px;
+}
+
 /* New__menu */
 .New__menu__container {
   position: relative;

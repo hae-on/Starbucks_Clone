@@ -9,6 +9,7 @@
   --color-light-green: #578f00;
   --color-green: #0c5f3a;
   --color-dark-green: #172b25;
+  --color-brown: #503e35;
 
   /* 요소 color */
   --color-font: #5a575c;
@@ -42,7 +43,11 @@
   --weight-regular: 400;
 }
 
-/* 재사용 */
+/* 전체 요소 */
+* {
+  margin: 0;
+}
+
 ul {
   list-style: none;
 }
@@ -66,18 +71,24 @@ button:hover {
 .navbar {
   background-color: var(--color-nav);
   display: flex;
+  border-top: solid 2px black;
+  width: 100%;
+}
+
+.nav__container {
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: solid 2px black;
+  margin: 0 auto;
 }
 
 .nav__logo {
-  margin-left: 145px;
+  margin-right: 145px;
 }
 
 .nav__content {
   color: var(--color-font);
-  margin-right: 130px;
+  /* margin-right: 130px; */
 }
 
 .small__nav {
@@ -142,6 +153,19 @@ button:hover {
 .main__nav__items:hover {
   text-decoration: underline;
   color: var(--color-light-green);
+}
+
+/* Nav media */
+.media__icons {
+  position: absolute;
+  display: none;
+  right: 0px;
+  font-size: var(--font-title);
+  color: var(--color-brown);
+}
+
+.media__icon {
+  margin-right: 25px;
 }
 
 /* Main */
@@ -710,8 +734,33 @@ button:hover {
   font-size: var(--font-micro);
 }
 
-/* Tablet view */
-@media screen and (min-width: 641px) and (max-width: 960px) {
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  /* Navbar */
   .navbar {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index: 888;
+    border-top: none;
+  }
+
+  .nav__container {
+    margin: 0;
+  }
+
+  .nav__content {
+    display: none;
+  }
+
+  .nav__logo img {
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+
+  .media__icons {
+    display: flex;
   }
 }

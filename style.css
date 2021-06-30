@@ -26,6 +26,15 @@
   /* Animation */
   --animation-duration: 300ms;
 
+  /* Font */
+  --font-title: 35px;
+  --font-more-large: 22px;
+  --font-large: 20px;
+  --font-more-regular: 18px;
+  --font-regular: 15px;
+  --fonnt-small: 14px;
+  --font-micro: 12px;
+
   /* Font weight */
   --weight-more-bold: 700;
   --weight-bold: 600;
@@ -44,7 +53,7 @@ button {
   padding: 9px 23px;
   cursor: pointer;
   color: white;
-  font-size: 15px;
+  font-size: var(--font-regular);
   transition: all var(--animation-duration) ease;
 }
 
@@ -75,7 +84,7 @@ button:hover {
   display: flex;
   position: relative;
   right: -200px;
-  font-size: 14px;
+  font-size: var(--fonnt-small);
   margin-top: 18px;
 }
 
@@ -111,7 +120,7 @@ button:hover {
   padding: 0;
   width: 35px;
   height: 35px;
-  font-size: 20px;
+  font-size: var(--font-large);
   border-radius: 5px;
   border: solid 1px var(--color-light-grey);
   display: block;
@@ -121,7 +130,7 @@ button:hover {
 
 .main__nav {
   display: flex;
-  font-size: 14px;
+  font-size: var(--fonnt-small);
 }
 
 .main__nav__items {
@@ -177,7 +186,6 @@ button:hover {
 .New__menu__btn {
   top: 240px;
   left: 290px;
-  font-size: 16px;
   border: solid 2px var(--color-black);
   color: var(--color-black);
 }
@@ -245,7 +253,7 @@ button:hover {
 }
 
 .Notice__banner__title {
-  font-size: 20px;
+  font-size: var(--font-large);
   margin-left: 250px;
 }
 
@@ -265,13 +273,13 @@ button:hover {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: var(--font-large);
   padding: 0;
 }
 
 .Notice__promo__title {
   margin-left: 80px;
-  font-size: 19px;
+  font-size: var(--font-large);
   font-weight: 550;
 }
 
@@ -305,7 +313,7 @@ button:hover {
 }
 
 .answer__content {
-  font-size: 19px;
+  font-size: var(--font-large);
   font-weight: var(--weight-semi-bold);
   margin-bottom: 35px;
 }
@@ -340,12 +348,12 @@ button:hover {
   position: absolute;
   background-color: var(--color-line);
   height: 1px;
-  width: 755px;
+  width: 760px;
   top: 143px;
 }
 
 .e-gift__content {
-  font-size: 15px;
+  font-size: var(--font-regular);
   display: inline-block;
 }
 
@@ -369,20 +377,20 @@ button:hover {
 
 .Papua__coffee__mini__title {
   color: #0c90a8;
-  font-size: 22px;
+  font-size: var(--font-more-large);
   font-weight: var(--weight-more-bold);
   margin: 0;
 }
 
 .Papua__coffee__title {
   color: var(--color-papua);
-  font-size: 35px;
+  font-size: var(--font-title);
   font-weight: var(--weight-more-bold);
   margin: 0;
 }
 
 .Papua__coffee__intro {
-  font-size: 18px;
+  font-size: var(--font-more-regular);
   font-weight: var(--weight-semi-bold);
   color: var(--color-font);
 }
@@ -568,7 +576,6 @@ button:hover {
   top: 290px;
   color: var(--color-font);
   padding: 9px 28px;
-  font-size: 17px;
 }
 
 .Store__btn:hover {
@@ -585,7 +592,7 @@ button:hover {
 .footer__list {
   color: white;
   font-weight: var(--weight-regular);
-  font-size: 14px;
+  font-size: var(--fonnt-small);
   display: flex;
   justify-content: center;
   line-height: 1.7;
@@ -636,7 +643,7 @@ button:hover {
 .terms__and__conditions {
   color: white;
   font-weight: var(--weight-regular);
-  font-size: 12px;
+  font-size: var(--font-micro);
   display: flex;
   justify-content: center;
   margin-top: 80px;
@@ -679,7 +686,7 @@ button:hover {
 
 .footer__btn {
   border: solid 2px white;
-  font-size: 13px;
+  font-size: var(--font-micro);
   margin-left: 10px;
   padding: 7px 20px;
 }
@@ -688,7 +695,7 @@ button:hover {
   display: flex;
   justify-content: center;
   color: var(--color-line);
-  font-size: 13px;
+  font-size: var(--font-micro);
   margin-top: 25px;
 }
 
@@ -700,5 +707,11 @@ button:hover {
   display: flex;
   justify-content: center;
   color: var(--color-line);
-  font-size: 13px;
+  font-size: var(--font-micro);
+}
+
+/* Tablet view */
+@media screen and (min-width: 641px) and (max-width: 960px) {
+  .navbar {
+  }
 }

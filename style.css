@@ -34,7 +34,11 @@
 }
 
 /* 재사용 */
-.button {
+ul {
+  list-style: none;
+}
+
+button {
   background-color: transparent;
   border-radius: var(--borer-radius-regular);
   padding: 9px 23px;
@@ -44,8 +48,7 @@
   transition: all var(--animation-duration) ease;
 }
 
-/* 버튼 효과주기 */
-.button:hover {
+button:hover {
   text-decoration: underline;
   /* transition: all var(--animation-duration) ease; */
 }
@@ -72,7 +75,6 @@
   display: flex;
   position: relative;
   right: -200px;
-  list-style: none;
   font-size: 14px;
   margin-top: 18px;
 }
@@ -105,6 +107,8 @@
 
 .small__nav__btn {
   background-color: white;
+  color: var(--color-font);
+  padding: 0;
   width: 35px;
   height: 35px;
   font-size: 20px;
@@ -117,7 +121,6 @@
 
 .main__nav {
   display: flex;
-  list-style: none;
   font-size: 14px;
 }
 
@@ -263,6 +266,7 @@
   height: 40px;
   border-radius: 50%;
   font-size: 20px;
+  padding: 0;
 }
 
 .Notice__promo__title {
@@ -274,6 +278,7 @@
 .Notice__promo__btn {
   border: solid 1px var(--color-black);
   margin-left: 60px;
+  color: black;
 }
 
 /* Rewards  */
@@ -594,7 +599,6 @@
 .partner,
 .recquit {
   margin: 0;
-  list-style: none;
   margin-right: 80px;
 }
 
@@ -633,7 +637,6 @@
   color: white;
   font-weight: var(--weight-regular);
   font-size: 12px;
-  list-style: none;
   display: flex;
   justify-content: center;
   margin-top: 80px;
@@ -690,7 +693,6 @@
 }
 
 .info__list {
-  list-style: none;
   margin-left: 20px;
 }
 

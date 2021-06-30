@@ -72,7 +72,8 @@ button:hover {
   background-color: var(--color-nav);
   display: flex;
   border-top: solid 2px black;
-  width: 100%;
+  height: 120px;
+  /* width: 100%; */
 }
 
 .nav__container {
@@ -83,20 +84,19 @@ button:hover {
 }
 
 .nav__logo {
-  margin-right: 145px;
+  margin-right: 250px;
 }
 
 .nav__content {
   color: var(--color-font);
-  /* margin-right: 130px; */
 }
 
 .small__nav {
   display: flex;
   position: relative;
-  right: -200px;
+  right: -160px;
   font-size: var(--fonnt-small);
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .small__nav__items,
@@ -142,12 +142,13 @@ button:hover {
 .main__nav {
   display: flex;
   font-size: var(--fonnt-small);
+  margin-bottom: 20px;
 }
 
 .main__nav__items {
   cursor: pointer;
-  padding: 20px 10px 25px 10px;
-  margin-right: 38px;
+  padding: 10px 10px 25px 10px;
+  margin-right: 30px;
 }
 
 .main__nav__items:hover {
@@ -762,5 +763,12 @@ button:hover {
 
   .media__icons {
     display: flex;
+  }
+
+  /* Badge */
+  .badge {
+    /* 크기를 em이나 rem으로 고려해볼 것 */
+    right: 10px;
+    top: 100px;
   }
 }

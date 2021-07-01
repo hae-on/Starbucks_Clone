@@ -185,6 +185,10 @@ button:hover {
 /* New__menu */
 .New__menu__container {
   position: relative;
+  box-sizing: border-box;
+  max-width: 1080px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .New__menu__slogan,
@@ -202,8 +206,13 @@ button:hover {
 }
 
 .New__menu__slogan {
-  top: 70px;
-  left: 180px;
+  padding-top: 70px;
+  padding-left: 20px;
+  width: 35%;
+}
+
+.New__menu__slogan img {
+  max-width: 100%;
 }
 
 /* keyframes css opacity fade in 검색 */
@@ -736,6 +745,7 @@ button:hover {
 }
 
 /* For below 768px screen width */
+
 @media screen and (max-width: 768px) {
   /* Navbar */
   .navbar {
@@ -778,19 +788,5 @@ button:hover {
     height: 250vw;
     background-size: cover;
     /* margin: 0 auto; */
-  }
-
-  .New__menu__media__bg {
-    /* height: 700px;
-    background-position: 50% top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%; */
-
-    /* position: relative;
-    box-sizing: border-box;
-    max-width: 1080px;
-    height: 100%;
-    margin: 0 auto; */
   }
 }

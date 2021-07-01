@@ -174,12 +174,12 @@ button:hover {
 .badge {
   position: fixed;
   right: 20px;
-  top: 180px;
+  top: 150px;
   z-index: 999;
 }
 
 .badge img {
-  width: 140px;
+  width: 9em;
 }
 
 /* New__menu */
@@ -198,7 +198,7 @@ button:hover {
 .New__menu__bg {
   background-image: url("image/new__menu/2021_summer2_bg.jpeg");
   height: 646px;
-  background-position: 50% top;
+  background-position: 37% top;
 }
 
 .New__menu__slogan {
@@ -770,5 +770,27 @@ button:hover {
     /* 크기를 em이나 rem으로 고려해볼 것 */
     right: 10px;
     top: 100px;
+  }
+
+  /* New__menu */
+  .New__menu__bg {
+    /* background-image: url("image/new__menu/2021_m_summer2_bg.jpeg"); */
+    height: 250vw;
+    background-size: cover;
+    /* margin: 0 auto; */
+  }
+
+  .New__menu__media__bg {
+    /* height: 700px;
+    background-position: 50% top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; */
+
+    /* position: relative;
+    box-sizing: border-box;
+    max-width: 1080px;
+    height: 100%;
+    margin: 0 auto; */
   }
 }

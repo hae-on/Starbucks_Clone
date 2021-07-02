@@ -186,26 +186,19 @@ button:hover {
   right: 20px;
   top: 150px;
   z-index: 999;
-  width: 20%;
 }
 
 .badge img {
-  width: 9em;
+  width: 90%;
   max-width: 100%;
 }
 
-/* New__menu */
 .New__menu__container {
   position: relative;
   box-sizing: border-box;
   max-width: 1080px;
   height: 100%;
   margin: 0 auto;
-}
-
-.New__menu__container img {
-  max-width: 100%;
-  height: auto;
 }
 
 .New__menu__slogan,
@@ -225,25 +218,22 @@ button:hover {
 .New__menu__bg {
   background-image: url("image/new__menu/2021_summer2_bg.jpeg");
   height: 646px;
-  background-position: 37% top;
+  background-position: 50% top;
+  background-size: cover;
 }
 
 .New__menu__slogan {
   padding-top: 30px;
-  padding-left: 20px;
+  padding-left: 5%;
+  top: 40px;
   width: 35%;
-}
-
-.New__menu__slogan img {
-  max-width: 100%;
-  height: auto;
 }
 
 /* keyframes css opacity fade in 검색 */
 
 .New__menu__btn {
-  top: 110%;
-  left: 33%;
+  top: 115%;
+  left: 17rem;
   border: solid 2px var(--color-black);
   color: var(--color-black);
 }
@@ -254,19 +244,18 @@ button:hover {
 
 .frappuccino {
   top: 170px;
-  left: 320px;
-  width: 50%;
+  left: 35%;
 }
 
-/* 프라푸치노 인프로만 안 줄어들음 */
 .frappuccino__intro {
-  left: -290px;
+  left: -60%;
   top: 270px;
+  width: 80%;
 }
 
 .blended {
   top: 110px;
-  left: 760px;
+  left: 57%;
 }
 
 .blended__intro {
@@ -276,7 +265,7 @@ button:hover {
 
 .tea {
   top: 180px;
-  left: 990px;
+  left: 79%;
 }
 
 .tea__intro {
@@ -771,7 +760,6 @@ button:hover {
 }
 
 /* For below 768px screen width */
-
 @media screen and (max-width: 768px) {
   /* Navbar */
   .navbar {
@@ -819,6 +807,7 @@ button:hover {
 
   .New__menu__container {
     /* 배경이 늘어남에 따라 안에 요소 함께 크기 증가 */
+    position: relative;
   }
 
   .New__menu__slogan {
@@ -832,7 +821,14 @@ button:hover {
 
   .frappuccino {
     top: 250px;
-    width: 600px;
+    width: 40%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 얘는 왜 안 줄어드는지 아시나요ㅕ */
+  .frappuccino__item {
+    width: 500px;
   }
 
   .frappuccino__intro,
@@ -841,7 +837,17 @@ button:hover {
     display: none;
   }
 
+  .frappuccino__m__intro,
+  .blended__m__intro,
+  .tea__m__intro {
+    position: absolute;
+  }
+
   .frappuccino__m__intro {
     display: block;
+    top: 150px;
+    left: -300px;
+    width: 45%;
+    padding-left: 20px;
   }
 }

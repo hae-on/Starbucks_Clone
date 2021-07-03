@@ -187,7 +187,7 @@ button:hover {
 }
 
 .badge img {
-  width: 90%;
+  width: 80%;
 }
 
 .New__menu__container {
@@ -788,44 +788,44 @@ button:hover {
 
   /* Badge */
   .badge {
-    /* 크기를 em이나 rem으로 고려해볼 것 */
     right: 10px;
     top: 100px;
     width: 25%;
   }
 
   /* New__menu */
+  #New__menu {
+    /* height: auto;
+    max-width: 100%; */
+  }
+
   .New__menu__bg {
     background-image: url("image/new__menu/2021_m_summer2_bg.jpeg");
     height: 250vw;
     background-size: cover;
-    /* margin: 0 auto; */
   }
 
   .New__menu__container {
-    /* 배경이 늘어남에 따라 안에 요소 함께 크기 증가 */
     position: relative;
   }
 
   .New__menu__slogan {
-    top: 100px;
-    width: 60%;
+    top: 7%;
+    width: 100%;
+  }
+
+  .New__menu__slogan img {
+    width: 50%;
   }
 
   .New__menu__btn {
     display: none;
   }
 
-  .frappuccino {
-    top: 250px;
-    width: 40%;
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* 얘는 왜 안 줄어드는지 아시나요ㅕ */
-  .frappuccino__item {
-    width: 500px;
+  .frappuccino img,
+  .blended img,
+  .tea img {
+    width: 100%;
   }
 
   .frappuccino__intro,
@@ -838,13 +838,49 @@ button:hover {
   .blended__m__intro,
   .tea__m__intro {
     position: absolute;
+    display: block;
+  }
+
+  .frappuccino__m__intro img,
+  .blended__m__intro img,
+  .tea__m__intro img {
+    width: 100%;
+  }
+
+  .frappuccino {
+    top: 18%;
+    width: 70%;
+    left: 57%;
   }
 
   .frappuccino__m__intro {
-    display: block;
-    top: 150px;
-    left: -300px;
-    width: 45%;
-    padding-left: 20px;
+    top: 37%;
+    left: -80%;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 70%;
+  }
+
+  .blended {
+    top: 54%;
+    left: 10%;
+    width: 70%;
+  }
+
+  .blended__m__intro {
+    top: -30%;
+    width: 55%;
+  }
+
+  .tea {
+    top: 67%;
+    width: 70%;
+    left: 38%;
+  }
+
+  .tea__m__intro {
+    top: -45%;
+    width: 60%;
+    left: 20%;
   }
 }

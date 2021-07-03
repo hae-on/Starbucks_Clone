@@ -81,8 +81,9 @@ button:hover {
   background-color: var(--color-nav);
   display: flex;
   border-top: solid 2px black;
-  height: 120px;
-  /* width: 100%; */
+  height: auto;
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 .nav__container {
@@ -90,11 +91,7 @@ button:hover {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-}
-
-.nav__logo {
-  margin-right: 250px;
-  padding-left: 20px;
+  width: 76%;
 }
 
 .nav__content {
@@ -150,6 +147,7 @@ button:hover {
 }
 
 .main__nav {
+  /* float: right; */
   display: flex;
   font-size: var(--fonnt-small);
   margin-bottom: 20px;
@@ -190,7 +188,6 @@ button:hover {
 
 .badge img {
   width: 90%;
-  max-width: 100%;
 }
 
 .New__menu__container {

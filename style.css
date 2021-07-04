@@ -182,7 +182,7 @@ button:hover {
 .badge {
   position: fixed;
   right: 20px;
-  top: 150px;
+  top: 20%;
   z-index: 999;
 }
 
@@ -212,6 +212,13 @@ button:hover {
   display: none;
 }
 
+.New__menu__slogan img,
+.frappuccino img,
+.blended img,
+.tea img {
+  width: 100%;
+}
+
 .New__menu__bg {
   background-image: url("image/new__menu/2021_summer2_bg.jpeg");
   height: 646px;
@@ -223,14 +230,15 @@ button:hover {
   padding-top: 30px;
   padding-left: 5%;
   top: 40px;
-  width: 35%;
+  width: 30%;
 }
 
 /* keyframes css opacity fade in 검색 */
 
+/* btn size 조정할 필요 %로 */
 .New__menu__btn {
   top: 115%;
-  left: 17rem;
+  left: 40%;
   border: solid 2px var(--color-black);
   color: var(--color-black);
 }
@@ -240,34 +248,39 @@ button:hover {
 }
 
 .frappuccino {
-  top: 170px;
-  left: 35%;
+  top: 25%;
+  left: 33%;
+  width: 37%;
 }
 
 .frappuccino__intro {
-  left: -60%;
-  top: 270px;
-  width: 80%;
+  left: -65%;
+  top: 55%;
+  width: 60%;
 }
 
 .blended {
-  top: 110px;
-  left: 57%;
+  top: 15%;
+  left: 55%;
+  width: 33%;
 }
 
 .blended__intro {
   left: -25px;
-  top: 360px;
+  top: 105%;
+  width: 60%;
 }
 
 .tea {
-  top: 180px;
-  left: 79%;
+  top: 25%;
+  left: 76%;
+  width: 35%;
 }
 
 .tea__intro {
-  left: -20px;
-  top: 340px;
+  top: 106%;
+  width: 70%;
+  left: -5%;
 }
 
 .frappuccino__intro,
@@ -754,6 +767,18 @@ button:hover {
   justify-content: center;
   color: var(--color-line);
   font-size: var(--font-micro);
+}
+
+@media screen and (max-width: 970px) {
+  .New__menu__bg {
+    height: 550px;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .New__menu__bg {
+    height: 500px;
+  }
 }
 
 /* For below 768px screen width */

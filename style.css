@@ -772,10 +772,41 @@ button:hover {
 }
 
 @media screen and (max-width: 970px) {
-  .New__menu__bg {
-    height: 550px;
+  /* Navbar */
+  .navbar {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index: 888;
+    border-top: none;
   }
 
+  .nav__container {
+    margin: 0;
+  }
+
+  .nav__content {
+    display: none;
+  }
+
+  .nav__logo img {
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+
+  .media__icons {
+    display: flex;
+  }
+
+  /* New__menu */
+  .New__menu__bg {
+    height: 550px;
+    padding-top: 30px;
+  }
+
+  /* Notice */
   .Notice__container {
     display: flex;
     flex-direction: column;
@@ -816,34 +847,6 @@ button:hover {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
-  /* Navbar */
-  .navbar {
-    height: 70px;
-    width: 100%;
-    position: fixed;
-    z-index: 888;
-    border-top: none;
-  }
-
-  .nav__container {
-    margin: 0;
-  }
-
-  .nav__content {
-    display: none;
-  }
-
-  .nav__logo img {
-    width: 50px;
-    position: absolute;
-    top: 10px;
-    left: 20px;
-  }
-
-  .media__icons {
-    display: flex;
-  }
-
   /* Badge */
   .badge {
     right: 10px;

@@ -800,6 +800,13 @@ button:hover {
     display: flex;
   }
 
+  /* Badge */
+  .badge {
+    right: 10px;
+    top: 100px;
+    width: 18%;
+  }
+
   /* New__menu */
   .New__menu__bg {
     height: 550px;
@@ -849,9 +856,7 @@ button:hover {
 @media screen and (max-width: 768px) {
   /* Badge */
   .badge {
-    right: 10px;
-    top: 100px;
-    width: 25%;
+    width: 26%;
   }
 
   /* New__menu */

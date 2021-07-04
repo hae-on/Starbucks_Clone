@@ -48,10 +48,6 @@
   margin: 0;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 ul {
   list-style: none;
 }
@@ -292,6 +288,8 @@ button:hover {
 /* Notice */
 .Notice__container {
   display: flex;
+  width: 100%;
+  position: relative;
 }
 
 .Notice__banner,
@@ -306,14 +304,13 @@ button:hover {
   color: white;
 }
 
-.Notice__promo {
-  background-color: var(--color-dark-white);
-  color: var(--color-font);
+.Notice__banner__container {
+  position: absolute;
+  right: 54%;
 }
 
 .Notice__banner__title {
   font-size: var(--font-large);
-  margin-left: 250px;
 }
 
 .Notice__banner__content {
@@ -323,7 +320,7 @@ button:hover {
 .Notice__banner__btn {
   color: var(--color-dark-white);
   border: solid 1px var(--color-dark-white);
-  margin-left: 85px;
+  margin-left: 100px;
 }
 
 .Notice__banner__btn,
@@ -336,15 +333,20 @@ button:hover {
   padding: 0;
 }
 
+.Notice__promo {
+  padding-left: 5%;
+  background-color: var(--color-dark-white);
+  color: var(--color-font);
+}
+
 .Notice__promo__title {
-  margin-left: 80px;
   font-size: var(--font-large);
   font-weight: 550;
 }
 
 .Notice__promo__btn {
   border: solid 1px var(--color-black);
-  margin-left: 60px;
+  margin-left: 30px;
   color: black;
 }
 
@@ -773,6 +775,37 @@ button:hover {
   .New__menu__bg {
     height: 550px;
   }
+
+  .Notice__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Notice__banner,
+  .Notice__promo {
+    width: 100%;
+  }
+
+  .Notice__banner {
+    /* padding-left: 130px; */
+  }
+
+  .Notice__banner__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: inherit;
+  }
+
+  .Notice__banner__btn {
+    margin-left: 70px;
+  }
+
+  .Notice__promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 870px) {
@@ -819,11 +852,6 @@ button:hover {
   }
 
   /* New__menu */
-  #New__menu {
-    /* height: auto;
-    max-width: 100%; */
-  }
-
   .New__menu__bg {
     background-image: url("image/new__menu/2021_m_summer2_bg.jpeg");
     height: 250vw;

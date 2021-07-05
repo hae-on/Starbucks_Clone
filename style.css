@@ -361,7 +361,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding-top: 30px;
 }
 
 .Rewards__logo img {
@@ -373,8 +373,12 @@ button:hover {
   margin-left: 50px;
 }
 
+.question__title {
+  margin-bottom: 20px;
+}
+
 .answer__content {
-  font-size: var(--font-large);
+  font-size: var(--font-more-regular);
   font-weight: var(--weight-semi-bold);
   margin-bottom: 35px;
 }
@@ -401,7 +405,7 @@ button:hover {
   border: solid 2px white;
   position: relative;
   right: -30px;
-  top: -15px;
+  top: -10px;
 }
 
 .e-gift::before {

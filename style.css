@@ -44,6 +44,10 @@
 }
 
 /* 전체 요소 */
+/* html {
+  width: 100%;
+} */
+
 * {
   margin: 0;
 }
@@ -51,11 +55,6 @@
 ul {
   list-style: none;
 }
-
-/* img {
-  max-width: 100%;
-  height: auto;
-} */
 
 button {
   background-color: transparent;
@@ -351,26 +350,31 @@ button:hover {
 }
 
 /* Rewards  */
-#Rewards {
+.Rewards {
   background-color: var(--color-dark-green);
   height: 230px;
-  position: relative;
 }
 
 .Rewards__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
   padding-top: 30px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.Rewards__logo {
+  float: left;
+  width: 25%;
+  text-align: center;
 }
 
 .Rewards__logo img {
-  width: 176px;
+  width: 65%;
 }
 
 .question {
   color: white;
-  margin-left: 50px;
 }
 
 .question__title {
@@ -385,8 +389,8 @@ button:hover {
 
 .question__btns {
   position: absolute;
-  right: 200px;
   top: 80px;
+  right: 0%;
 }
 
 .join__btn {
@@ -398,14 +402,15 @@ button:hover {
 .login__btn {
   background-color: transparent;
   border: solid 2px white;
-  padding: 7px 23px;
+  padding: 7px 15px;
 }
 
 .e-gift__btn {
+  position: absolute;
+  display: block;
+  right: 0%;
+  top: 155px;
   border: solid 2px white;
-  position: relative;
-  right: -30px;
-  top: -10px;
 }
 
 .e-gift::before {
@@ -413,13 +418,12 @@ button:hover {
   position: absolute;
   background-color: var(--color-line);
   height: 1px;
-  width: 760px;
+  width: 75%;
   top: 143px;
 }
 
 .e-gift__content {
   font-size: var(--font-regular);
-  display: inline-block;
 }
 
 /* Papua__coffee */
@@ -773,6 +777,11 @@ button:hover {
   justify-content: center;
   color: var(--color-line);
   font-size: var(--font-micro);
+}
+
+@media screen and (max-width: 1030px) {
+  .Rewards__container {
+  }
 }
 
 @media screen and (max-width: 970px) {

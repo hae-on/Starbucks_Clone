@@ -425,6 +425,14 @@ button:hover {
   font-size: var(--font-regular);
 }
 
+.question__br,
+.answer__br1,
+.answer__br2,
+.e-gift__br1,
+.e-gift__br2 {
+  display: none;
+}
+
 /* Papua__coffee */
 .Papua__coffee__bg {
   background-image: url("image/Papua__coffee/2021_summer2_bean_bg.jpeg");
@@ -779,7 +787,55 @@ button:hover {
 }
 
 @media screen and (max-width: 1030px) {
+  .Rewards {
+    height: 500px;
+  }
+
   .Rewards__container {
+    padding-top: 40px;
+  }
+
+  .Rewards__logo {
+    width: 40%;
+    margin-top: 7%;
+  }
+
+  .question {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  .answer {
+    margin-bottom: 60px;
+  }
+
+  .e-gift::before {
+    top: 73%;
+    width: 50%;
+  }
+
+  .question__btns,
+  .e-gift__btn {
+    display: inline-block;
+    right: auto;
+  }
+
+  .question__btns {
+    top: 58%;
+  }
+
+  .e-gift__btn {
+    top: 105%;
+    left: 40%;
+  }
+
+  .question__br,
+  .answer__br1,
+  .answer__br2,
+  .e-gift__br1,
+  .e-gift__br2 {
+    display: block;
   }
 }
 

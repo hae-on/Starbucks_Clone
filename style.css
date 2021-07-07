@@ -455,6 +455,7 @@ button:hover {
   background-image: url("image/Papua__coffee/2021_summer2_bean_bg.jpeg");
   height: 571px;
   background-position: 50% top;
+  /* background-position: center; */
   background-size: cover;
 }
 
@@ -487,6 +488,7 @@ button:hover {
   font-size: var(--font-more-regular);
   font-weight: var(--weight-semi-bold);
   color: var(--color-font);
+  margin-bottom: 30px;
 }
 
 .Papua__coffee__btn {
@@ -807,6 +809,28 @@ button:hover {
   justify-content: center;
   color: var(--color-line);
   font-size: var(--font-micro);
+}
+
+@media screen and (max-width: 1100px) {
+  .Papua__coffee__bg {
+    height: 50vw;
+    background-position: 80% center;
+  }
+
+  .Papua__coffee__container {
+    height: 50vw;
+    white-space: nowrap;
+  }
+
+  .Papua__coffee__img {
+    margin: 0;
+
+    padding-left: 30px;
+  }
+
+  .Papua__coffee__img img {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 1030px) {

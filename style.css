@@ -829,7 +829,7 @@ button:hover {
   }
 
   .Papua__coffee__img img {
-    width: 80%;
+    width: 85%;
   }
 }
 
@@ -1160,6 +1160,7 @@ button:hover {
     flex-direction: column;
     text-align: center;
     white-space: nowrap;
+    height: auto;
   }
 
   .Papua__coffee__img {

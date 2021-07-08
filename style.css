@@ -503,24 +503,34 @@ button:hover {
 }
 
 /* Brazil__coffee */
-.Brazil__coffee__half__bg {
-  background-image: url("image/Brazil__coffee/reserve_sundried_brazil_bean4_1.png");
+.Brazil__coffee {
   height: 392px;
-  background-color: var(--color-brazil-bg);
-  background-position: 50% top;
+  background-image: url("image/Brazil__coffee/reserve_sundried_brazil_bg2.jpeg");
+  background-size: cover;
+  overflow: hidden;
   position: relative;
+}
+
+.Brazil__coffee__container {
+  height: 100%;
+  width: 100%;
+}
+
+.Brazil__coffee__half__bg {
+  position: absolute;
+  right: -26%;
 }
 
 .Brazil__coffee__title {
   position: absolute;
   top: 95px;
-  left: 160px;
+  right: 50%;
 }
 
 .Brazil__coffee__btn {
   position: absolute;
   top: 270px;
-  left: 430px;
+  right: 62%;
   color: var(--color-brazil);
   border: solid 2px var(--color-brazil);
 }
@@ -807,7 +817,15 @@ button:hover {
   font-size: var(--font-micro);
 }
 
+@media screen and (max-width: 1200px) {
+  /* Brazil__coffee */
+  .Brazil__coffee__half__bg {
+    right: -40%;
+  }
+}
+
 @media screen and (max-width: 1100px) {
+  /* Papua */
   .Papua__coffee__bg {
     height: 50vw;
     background-position: 80% center;
@@ -826,6 +844,21 @@ button:hover {
 
   .Papua__coffee__img img {
     width: 85%;
+  }
+
+  /* Brazil__coffee */
+  .Brazil__coffee__title {
+    width: 50%;
+    right: 40%;
+  }
+
+  .Brazil__coffee__title img {
+    width: 80%;
+  }
+
+  .Brazil__coffee__btn {
+    top: 60%;
+    right: 60%;
   }
 }
 
@@ -885,6 +918,37 @@ button:hover {
   .answer__m__br,
   .e-gift__m__br {
     display: none;
+  }
+
+  /* Brazil__coffee */
+  .Brazil__coffee {
+    height: 178vw;
+  }
+
+  .Brazil__coffee__title {
+    display: none;
+  }
+
+  .Brazil__coffee__half__bg {
+    background-repeat: no-repeat;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+  }
+
+  .Brazil__half {
+    display: none;
+  }
+
+  .Brazil__m {
+    width: 100%;
+    height: 100%;
+  }
+
+  .Brazil__coffee__btn {
+    top: 86%;
+    left: 50%;
+    margin-left: -55px;
   }
 }
 

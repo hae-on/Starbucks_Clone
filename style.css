@@ -552,25 +552,33 @@ button:hover {
 .Pick__menu__txt {
   position: relative;
   top: 130px;
-  left: 200px;
+
+  right: -15%;
+}
+
+.Pick__menu__title {
+  position: absolute;
+  right: 80%;
 }
 
 .Pick__menu__content {
   position: absolute;
-  left: -100px;
-  bottom: -160px;
+
+  right: 80%;
+  top: 250px;
 }
 
 .Pick__menu__img {
   position: absolute;
   top: -10px;
-  right: 200px;
+  right: 15%;
 }
 
 .Pick__menu__btn {
-  position: relative;
-  top: 240px;
-  left: 140px;
+  position: absolute;
+  top: 460px;
+
+  right: 80%;
   border: solid 2px white;
 }
 

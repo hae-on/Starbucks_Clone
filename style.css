@@ -552,7 +552,6 @@ button:hover {
 .Pick__menu__txt {
   position: relative;
   top: 130px;
-
   right: -15%;
 }
 
@@ -563,7 +562,6 @@ button:hover {
 
 .Pick__menu__content {
   position: absolute;
-
   right: 80%;
   top: 250px;
 }
@@ -577,7 +575,6 @@ button:hover {
 .Pick__menu__btn {
   position: absolute;
   top: 460px;
-
   right: 80%;
   border: solid 2px white;
 }
@@ -585,6 +582,10 @@ button:hover {
 .Pick__menu__btn:hover {
   background-color: white;
   color: var(--color-font);
+}
+
+.Pick__menu__m {
+  display: none;
 }
 
 /* Reserve */
@@ -868,6 +869,15 @@ button:hover {
     top: 60%;
     right: 60%;
   }
+
+  /* Pick__menu */
+  .Pick__menu__img {
+    right: 10%;
+  }
+
+  .Pick__menu__img img {
+    width: 87%;
+  }
 }
 
 @media screen and (max-width: 1030px) {
@@ -957,6 +967,47 @@ button:hover {
     top: 86%;
     left: 50%;
     margin-left: -55px;
+  }
+
+  /* Pick__menu  */
+  .Pick__menu__bg {
+    height: 120vw;
+    position: relative;
+  }
+
+  .Pick__menu__img {
+    right: 5%;
+    width: 80%;
+    top: 10%;
+  }
+
+  .Pick__menu__title {
+    display: none;
+  }
+
+  .Pick__menu__content {
+    display: none;
+  }
+  .Pick__menu__txt {
+    position: static;
+  }
+
+  .Pick__menu__btn {
+    position: absolute;
+    top: 85%;
+    right: 40%;
+  }
+
+  .Pick__menu__m {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: -200px;
+    width: 80%;
+  }
+
+  .Pick__menu__m img {
+    width: 60%;
   }
 }
 
@@ -1262,5 +1313,10 @@ button:hover {
     font-size: 3.4vw;
     font-weight: var(--weight-bold);
     margin-bottom: 10%;
+  }
+
+  /* Pick__menu */
+  .Pick__menu__m {
+    display: none;
   }
 }

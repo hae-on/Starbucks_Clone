@@ -589,11 +589,19 @@ button:hover {
 }
 
 /* Reserve */
-
 #Reserve {
-  height: 700px;
+  /* height: 750px; */
+  height: 50vw;
   width: 100%;
   position: relative;
+}
+
+.Reserve__container {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  padding-top: 6%;
+  margin: 0 auto;
 }
 
 .Reserve__img::before {
@@ -601,45 +609,52 @@ button:hover {
   position: absolute;
   background-color: var(--color-line);
   height: 1px;
-  width: 70%;
-  top: 59%;
-  right: 50px;
+  width: 180%;
+  top: 65%;
+  /* right: -510px; */
+  left: 54%;
+}
+
+.Reserve__img {
+  position: absolute;
+  right: 55%;
+  width: 45%;
 }
 
 .Reserve__img img {
-  position: absolute;
-  margin-top: 90px;
-  margin-left: 140px;
-  width: 450px;
+  width: 80%;
 }
 
 .Reserve__img::after {
   content: "";
   position: absolute;
   background-color: var(--color-line);
-  height: 60%;
+  height: 90%;
   width: 1px;
-  top: 130px;
-  left: 44%;
+  left: 84%;
 }
 
 .Reserve__title {
-  position: relative;
-  top: 250px;
-  left: 668px;
+  position: absolute;
+  top: 30%;
+  right: 12%;
+  width: 45%;
+}
+
+.Reserve__title img {
+  width: 80%;
 }
 
 .Reserve__btn {
-  position: relative;
-  top: 340px;
-  left: 650px;
+  position: absolute;
+  top: 55%;
+  right: 20%;
   border: none;
+  width: 50%;
 }
 
-.Reserve__btn :hover {
-  /* 그림자 현상으로 인한 오류 내 마음대로 바꾸기 */
-  /* background-color: black; */
-  /* position: relative; */
+.Reserve__btn img {
+  width: 50%;
 }
 
 /* Store */
@@ -647,6 +662,7 @@ button:hover {
   position: relative;
   height: 430px;
   background-color: #e6e6e6;
+  overflow: hidden;
 }
 
 .Store__img__big {
@@ -824,6 +840,13 @@ button:hover {
   justify-content: center;
   color: var(--color-line);
   font-size: var(--font-micro);
+}
+
+@media screen and (max-width: 1400px) {
+  /* Reserve */
+  #Reserve {
+    /* height: 50vw; */
+  }
 }
 
 @media screen and (max-width: 1200px) {

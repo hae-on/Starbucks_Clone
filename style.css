@@ -589,8 +589,7 @@ button:hover {
 }
 
 /* Reserve */
-#Reserve {
-  /* height: 750px; */
+.Reserve {
   height: 50vw;
   width: 100%;
   position: relative;
@@ -611,7 +610,6 @@ button:hover {
   height: 1px;
   width: 180%;
   top: 65%;
-  /* right: -510px; */
   left: 54%;
 }
 
@@ -655,6 +653,11 @@ button:hover {
 
 .Reserve__btn img {
   width: 50%;
+}
+
+.Reserve__m__img,
+.Reserve__m__title {
+  display: none;
 }
 
 /* Store */
@@ -842,13 +845,6 @@ button:hover {
   font-size: var(--font-micro);
 }
 
-@media screen and (max-width: 1400px) {
-  /* Reserve */
-  #Reserve {
-    /* height: 50vw; */
-  }
-}
-
 @media screen and (max-width: 1200px) {
   /* Brazil__coffee */
   .Brazil__coffee__half__bg {
@@ -1031,6 +1027,52 @@ button:hover {
 
   .Pick__menu__m img {
     width: 60%;
+  }
+
+  /* Reserve */
+  .Reserve {
+    height: 200vw;
+  }
+
+  .Reserve__img,
+  .Reserve__title {
+    display: none;
+  }
+
+  .Reserve__m__img,
+  .Reserve__m__title {
+    display: block;
+  }
+
+  .Reserve__container {
+    padding-top: 15%;
+  }
+
+  .Reserve__m__img {
+    width: 100%;
+    margin-bottom: 15%;
+  }
+
+  .Reserve__m__img img {
+    width: 100%;
+  }
+
+  .Reserve__m__title {
+    width: 100%;
+  }
+
+  .Reserve__m__title img {
+    width: 100%;
+  }
+
+  .Reserve__btn {
+    width: 70%;
+    top: 87%;
+    right: 15%;
+  }
+
+  .Reserve__btn img {
+    width: 80%;
   }
 }
 

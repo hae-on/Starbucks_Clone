@@ -672,7 +672,12 @@ button:hover {
 .Store__container {
   position: relative;
   width: 90%;
+  height: 100%;
   left: 30%;
+}
+
+.Store__img {
+  width: 100%;
 }
 
 .Store__img__big {
@@ -734,7 +739,6 @@ button:hover {
 .Store__btn {
   position: absolute;
   top: 340px;
-  /* right: 7%; */
   padding: 9px 33px;
   color: var(--color-font);
   border: 3px solid black;
@@ -745,6 +749,10 @@ button:hover {
 .Store__btn:hover {
   background-color: black;
   color: white;
+}
+
+.Store__m__txt {
+  display: none;
 }
 
 /* footer */
@@ -878,6 +886,59 @@ button:hover {
   /* Store */
   .Store__bg__img__house {
     left: 50%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  /* Store */
+  .Store {
+    height: 950px;
+  }
+
+  .Store__container {
+    left: 30%;
+  }
+
+  .Store__title,
+  .Store__content {
+    display: none;
+  }
+
+  .Store__m__txt {
+    display: block;
+  }
+
+  .Store__img {
+    position: absolute;
+    left: 280px;
+  }
+
+  .Store__img img {
+    width: 95%;
+  }
+
+  .Store__img__small {
+    left: -60px;
+  }
+
+  .Store__bg__img__coffee {
+    top: 25%;
+    left: -10%;
+  }
+
+  .Store__txt {
+    top: 420px;
+    left: -50px;
+    width: 50%;
+  }
+
+  .Store__btn {
+    left: 200px;
+  }
+
+  .Store__bg__img__house {
+    top: 850px;
+    left: 40%;
   }
 }
 
@@ -1165,10 +1226,6 @@ button:hover {
     width: 100%;
   }
 
-  .Notice__banner {
-    /* padding-left: 130px; */
-  }
-
   .Notice__banner__container {
     display: flex;
     justify-content: center;
@@ -1189,8 +1246,14 @@ button:hover {
 }
 
 @media screen and (max-width: 870px) {
+  /* New menu */
   .New__menu__bg {
     height: 500px;
+  }
+
+  /* Store */
+  .Store__bg__img__house {
+    left: 30%;
   }
 }
 
@@ -1419,5 +1482,47 @@ button:hover {
   /* Pick__menu */
   .Pick__menu__m {
     display: none;
+  }
+
+  /* Store */
+  .Store__container {
+    left: 20%;
+  }
+
+  .Store__txt img {
+    width: 170%;
+  }
+
+  .Store__btn {
+    left: 60%;
+    top: 130%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Store__img {
+    top: 17px;
+  }
+
+  .Store__img img {
+    width: 85%;
+  }
+
+  .Store__txt {
+    top: 380px;
+    width: 50%;
+  }
+
+  .Store__txt img {
+    width: 180%;
+  }
+
+  .Store__img__small {
+    left: -100px;
+    top: 120px;
+  }
+
+  .Store__bg__img__coffee img {
+    width: 70%;
   }
 }

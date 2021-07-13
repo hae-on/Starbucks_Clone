@@ -661,56 +661,85 @@ button:hover {
 }
 
 /* Store */
-.Store__bg__img {
+.Store {
   position: relative;
-  height: 430px;
+  height: 500px;
   background-color: #e6e6e6;
   overflow: hidden;
+  width: 100%;
+}
+
+.Store__container {
+  position: relative;
+  width: 90%;
+  left: 30%;
 }
 
 .Store__img__big {
-  position: relative;
-  top: -107px;
-  left: 150px;
+  position: absolute;
+  top: -17px;
+  left: -280px;
+}
+
+.Store__img__big img {
+  width: 450px;
 }
 
 .Store__img__small {
-  position: relative;
-  top: -280px;
-  left: 370px;
+  position: absolute;
+  top: 160px;
+  left: 20px;
+}
+
+.Store__img__small img {
+  width: 280px;
 }
 
 .Store__bg__img__coffee {
   position: absolute;
-  left: 530px;
+  left: 200px;
   top: -40px;
-  /* 넘어가는 애 처리하기 (overflow 안 먹음) */
 }
 
 .Store__bg__img__house {
+  position: absolute;
+  left: 60%;
+  top: 400px;
+}
+
+.Store__txt {
   position: relative;
-  left: 80%;
-  top: 76%;
+  top: -20px;
+  left: 400px;
 }
 
 .Store__title {
   position: absolute;
-  top: 130px;
-  left: 850px;
+  top: 140px;
+}
+
+.Store__title img {
+  width: 450px;
 }
 
 .Store__content {
   position: absolute;
-  top: 200px;
-  left: 850px;
+  top: 220px;
+}
+
+.Store__content img {
+  width: 480px;
 }
 
 .Store__btn {
   position: absolute;
-  left: 860px;
-  top: 290px;
+  top: 340px;
+  /* right: 7%; */
+  padding: 9px 33px;
   color: var(--color-font);
-  padding: 9px 28px;
+  border: 3px solid black;
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
 }
 
 .Store__btn:hover {
@@ -843,6 +872,13 @@ button:hover {
   justify-content: center;
   color: var(--color-line);
   font-size: var(--font-micro);
+}
+
+@media screen and (max-width: 1400px) {
+  /* Store */
+  .Store__bg__img__house {
+    left: 50%;
+  }
 }
 
 @media screen and (max-width: 1200px) {

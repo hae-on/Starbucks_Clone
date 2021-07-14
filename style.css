@@ -20,6 +20,8 @@
   --color-brazil-bg: #e7c7a1;
   --color-brazil: #7f522d;
   --color-footer: #2b2928;
+  --color-footer-title: #645952;
+  --color-footer-list: #8a7871;
 
   /* Border-radius */
   --borer-radius-regular: 5px;
@@ -758,7 +760,10 @@ button:hover {
 /* footer */
 .footer {
   background-color: var(--color-footer);
-  height: 600px;
+  height: 700px;
+  /* width: 100%;
+  margin: 0 auto; */
+  position: relative;
 }
 
 .footer__list {
@@ -766,10 +771,17 @@ button:hover {
   font-weight: var(--weight-regular);
   font-size: var(--fonnt-small);
   display: flex;
+
   justify-content: center;
   line-height: 1.7;
   padding-top: 50px;
   cursor: pointer;
+}
+
+.footer__logo {
+  position: absolute;
+  top: 20px;
+  right: 4%;
 }
 
 .company,
@@ -778,7 +790,8 @@ button:hover {
 .partner,
 .recquit {
   margin: 0;
-  margin-right: 80px;
+  width: 230px;
+  padding-bottom: 30px;
 }
 
 .company__title,
@@ -789,12 +802,28 @@ button:hover {
   margin-bottom: 10px;
 }
 
+.footer i {
+  display: none;
+}
+
+.footer i:hover {
+  text-decoration: none;
+}
+
 .company__title:hover,
 .corpor__title:hover,
 .community__title:hover,
 .partner__title:hover,
 .recquit__title:hover {
   text-decoration: underline;
+}
+
+.company__list,
+.corpor__list,
+.community__list,
+.partner__list,
+.recquit__list {
+  margin: 4px;
 }
 
 .company__list:hover,
@@ -805,6 +834,10 @@ button:hover {
   text-decoration: underline;
 }
 
+.footer__m__btns {
+  display: none;
+}
+
 .footer__banner {
   display: flex;
   justify-content: center;
@@ -812,13 +845,20 @@ button:hover {
   cursor: pointer;
 }
 
+.footer__resize__banner {
+  display: none;
+}
+
 .terms__and__conditions {
   color: white;
   font-weight: var(--weight-regular);
   font-size: var(--font-micro);
-  display: flex;
-  justify-content: center;
+  text-align: center;
   margin-top: 80px;
+}
+
+.footer__br {
+  display: none;
 }
 
 .tac__list {
@@ -854,25 +894,22 @@ button:hover {
   display: flex;
   justify-content: center;
   padding: 0;
+  margin-top: 20px;
 }
 
 .footer__btn {
-  border: solid 2px white;
-  font-size: var(--font-micro);
+  border: solid 3px white;
+  font-size: var(--weight-regular);
   margin-left: 10px;
-  padding: 7px 20px;
+  padding: 7px 24px;
 }
 
 .footer__info {
-  display: flex;
-  justify-content: center;
   color: var(--color-line);
-  font-size: var(--font-micro);
+  font-size: var(--fonnt-small);
   margin-top: 25px;
-}
-
-.info__list {
-  margin-left: 20px;
+  text-align: center;
+  word-break: keep-all;
 }
 
 .footer__rights {
@@ -880,6 +917,8 @@ button:hover {
   justify-content: center;
   color: var(--color-line);
   font-size: var(--font-micro);
+  margin-top: 20px;
+  padding-bottom: 50px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -940,12 +979,36 @@ button:hover {
     top: 850px;
     left: 40%;
   }
+
+  /* footer */
+  .footer__logo {
+    right: 1%;
+  }
+
+  .footer__banner {
+    display: none;
+  }
+
+  .footer__resize__banner {
+    display: block;
+  }
+
+  .footer__banner__top,
+  .footer__banner__bottom {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   /* Brazil__coffee */
   .Brazil__coffee__half__bg {
     right: -40%;
+  }
+
+  /* footer */
+  .footer {
+    height: 800px;
   }
 }
 
@@ -993,6 +1056,29 @@ button:hover {
 
   .Pick__menu__img img {
     width: 87%;
+  }
+
+  /* footer */
+  .footer {
+    height: 900px;
+  }
+
+  .footer__list {
+    right: -8%;
+  }
+
+  .footer__m__btns {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+  }
+
+  .footer__m__btn {
+    border-radius: var(--borer-radius-regular);
+    border: 3px solid white;
+    margin-right: 15px;
+    font-size: var(--font-large);
   }
 }
 
@@ -1245,6 +1331,76 @@ button:hover {
   }
 }
 
+@media screen and (max-width: 940px) {
+  /* footer */
+  .footer {
+    height: 100%;
+    width: 100%;
+  }
+
+  .footer__list {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    width: 100%;
+    background-color: var(--color-footer-title);
+    padding: 0;
+  }
+
+  .footer ul {
+    padding: 0;
+    background-color: var(--color-footer-list);
+    width: 100%;
+  }
+
+  .footer li {
+    line-height: 50px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .footer i {
+    display: block;
+    font-size: 30px;
+    position: relative;
+    top: 10px;
+    right: 3%;
+  }
+
+  .company__title,
+  .corpor__title,
+  .community__title,
+  .partner__title,
+  .recquit__title {
+    background-color: var(--color-footer-title);
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    text-indent: 15px;
+  }
+
+  .company__list,
+  .corpor__list,
+  .community__list,
+  .partner__list,
+  .recquit__list {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    text-indent: 15px;
+  }
+
+  .footer__logo {
+    display: none;
+  }
+
+  .partner {
+    position: static;
+  }
+}
+
 @media screen and (max-width: 870px) {
   /* New menu */
   .New__menu__bg {
@@ -1254,6 +1410,18 @@ button:hover {
   /* Store */
   .Store__bg__img__house {
     left: 30%;
+  }
+
+  /* footer */
+  .terms__and__conditions {
+    display: inline-block;
+    width: 100%;
+    font-size: var(--fonnt-small);
+    margin-top: 40px;
+  }
+
+  .footer__br {
+    display: block;
   }
 }
 
@@ -1496,6 +1664,12 @@ button:hover {
   .Store__btn {
     left: 60%;
     top: 130%;
+  }
+
+  /* footer */
+  .footer__info {
+    display: flex;
+    flex-direction: column;
   }
 }
 

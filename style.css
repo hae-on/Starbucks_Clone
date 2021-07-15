@@ -562,14 +562,19 @@ button:hover {
   right: -15%;
 }
 
+.Pick__menu__title,
+.Pick__menu__content,
+.Pick__menu__btn {
+  right: 80%;
+  animation: pick__right 2s;
+}
+
 .Pick__menu__title {
   position: absolute;
-  right: 80%;
 }
 
 .Pick__menu__content {
   position: absolute;
-  right: 80%;
   top: 250px;
 }
 
@@ -582,7 +587,7 @@ button:hover {
 .Pick__menu__btn {
   position: absolute;
   top: 460px;
-  right: 80%;
+
   border: solid 2px white;
 }
 
@@ -1726,6 +1731,15 @@ button:hover {
   }
 }
 
+@keyframes left {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
 @keyframes papua_left {
   0% {
     left: -300%;
@@ -1741,5 +1755,14 @@ button:hover {
   }
   100% {
     right: 0%;
+  }
+}
+
+@keyframes pick__right {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: 80%;
   }
 }

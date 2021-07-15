@@ -462,6 +462,16 @@ button:hover {
   margin-right: 110px;
 }
 
+.Papua__coffee__img img {
+  position: relative;
+  animation: papua_left 2s;
+}
+
+.Papua__coffee__content {
+  position: relative;
+  animation: papua_right 2s;
+}
+
 .Papua__coffee__mini__title {
   color: #0c90a8;
   font-size: var(--font-more-large);
@@ -1712,5 +1722,23 @@ button:hover {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes papua_left {
+  0% {
+    left: -300%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes papua_right {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
   }
 }

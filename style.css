@@ -525,6 +525,7 @@ button:hover {
 .Brazil__coffee__half__bg {
   position: absolute;
   right: -26%;
+  animation: fadein 3s;
 }
 
 .Brazil__coffee__title {

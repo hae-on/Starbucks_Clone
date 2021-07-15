@@ -649,6 +649,7 @@ button:hover {
   top: 30%;
   right: 12%;
   width: 45%;
+  animation: reserve__right 2s;
 }
 
 .Reserve__title img {
@@ -661,6 +662,7 @@ button:hover {
   right: 20%;
   border: none;
   width: 50%;
+  animation: reserve__btn__right 2s;
 }
 
 .Reserve__btn img {
@@ -1731,15 +1733,6 @@ button:hover {
   }
 }
 
-@keyframes left {
-  0% {
-    left: 100%;
-  }
-  100% {
-    left: 0%;
-  }
-}
-
 @keyframes papua_left {
   0% {
     left: -300%;
@@ -1764,5 +1757,23 @@ button:hover {
   }
   100% {
     right: 80%;
+  }
+}
+
+@keyframes reserve__right {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 12%;
+  }
+}
+
+@keyframes reserve__btn__right {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 20%;
   }
 }

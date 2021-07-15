@@ -45,11 +45,6 @@
   --weight-regular: 400;
 }
 
-/* 전체 요소 */
-/* html {
-  font-size: 100%;
-} */
-
 * {
   margin: 0;
 }
@@ -234,9 +229,6 @@ button:hover {
   width: 30%;
 }
 
-/* keyframes css opacity fade in 검색 */
-
-/* btn size 조정할 필요 %로 */
 .New__menu__btn {
   top: 115%;
   left: 40%;
@@ -453,7 +445,6 @@ button:hover {
   background-image: url("image/Papua__coffee/2021_summer2_bean_bg.jpeg");
   height: 571px;
   background-position: 50% top;
-  /* background-position: center; */
   background-size: cover;
 }
 
@@ -761,8 +752,6 @@ button:hover {
 .footer {
   background-color: var(--color-footer);
   height: 700px;
-  /* width: 100%;
-  margin: 0 auto; */
   position: relative;
 }
 

@@ -129,7 +129,7 @@ button:hover {
 }
 
 /* nav input & button */
-.nav__input {
+/* .nav__input {
   background-color: white;
   border: solid 1px var(--color-light-grey);
   width: 0;
@@ -139,13 +139,12 @@ button:hover {
   top: -10px;
   opacity: 0;
   transition: all 500ms ease-in;
-  padding: 3px;
-}
+  padding: 3px; }*/
 
+/* 
 .small__nav__input {
   position: relative;
   background-color: white;
-  /* background-color: pink; */
   color: var(--color-font);
   border: none;
   width: 120px;
@@ -155,9 +154,9 @@ button:hover {
   padding-left: 10px;
   opacity: 0;
   transition: all 500ms ease-in;
-}
+} */
 
-.input__btn,
+/* .input__btn,
 .small__nav__btn {
   color: var(--color-font);
   font-size: var(--font-large);
@@ -173,8 +172,59 @@ button:hover {
   display: block;
   position: relative;
   top: -7px;
+} */
+
+.nav__input {
+  background-color: white;
+  border: solid 1px var(--color-light-grey);
+  width: 170px;
+  height: 36px;
+  border-radius: 5px;
+  position: relative;
+  top: -10px;
+  opacity: 0;
+  transition: all 500ms ease-in;
+  padding: 3px;
 }
 
+.small__nav__input {
+  position: relative;
+  background-color: white;
+  color: var(--color-font);
+  border: none;
+  width: 120px;
+  height: 26px;
+  border-radius: 5px;
+  top: -2.6px;
+  padding-left: 10px;
+  opacity: 0;
+  transition: all 500ms ease-in;
+}
+
+.input__btn,
+.small__nav__btn {
+  color: var(--color-font);
+  font-size: var(--font-large);
+  padding: 0;
+  width: 39px;
+  height: 39px;
+}
+
+.input__btn {
+  border: none;
+}
+
+.small__nav__btn {
+  background-color: white;
+  border-radius: 5px;
+  border: solid 1px var(--color-light-grey);
+  display: block;
+  position: relative;
+  top: -8px;
+  left: -22%;
+}
+
+/* ==== */
 .main__nav {
   display: flex;
   font-size: var(--fonnt-small);

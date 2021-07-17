@@ -1,5 +1,6 @@
 "use strict";
 
+const smallNav = document.querySelector(".small__nav");
 const navInputForm = document.querySelector(".nav__input__form");
 const navInputDiv = document.querySelector(".nav__input");
 const navBtn = document.querySelector(".small__nav__btn");
@@ -13,6 +14,7 @@ function changeNav() {
   navInput.style.opacity = 1;
   navBtn.style.display = "none";
   navBtn.style.right = "-100%";
+  smallNav.style.right = "-35px";
 }
 
 // input값 전송하고 알람창

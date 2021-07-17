@@ -75,11 +75,14 @@ button:hover {
 /* navbar */
 .navbar {
   background-color: var(--color-nav);
-  display: flex;
+  /* display: flex; */
+  position: fixed;
   border-top: solid 2px black;
   height: auto;
+  width: 100%;
   max-width: 100%;
   white-space: nowrap;
+  z-index: 999;
 }
 
 .nav__container {
@@ -100,6 +103,7 @@ button:hover {
   right: -160px;
   font-size: var(--fonnt-small);
   margin-top: 20px;
+  /* transition: all 600ms; */
 }
 
 .small__nav__items,
@@ -222,6 +226,7 @@ button:hover {
   width: 80%;
 }
 
+/* New__menu */
 .New__menu__container {
   position: relative;
   box-sizing: border-box;
@@ -254,8 +259,9 @@ button:hover {
 .New__menu__bg {
   background-image: url("image/new__menu/2021_summer2_bg.jpeg");
   height: 646px;
-  background-position: 50% top;
+  background-position: 35% top;
   background-size: cover;
+  padding-top: 160px;
 }
 
 .New__menu__slogan {

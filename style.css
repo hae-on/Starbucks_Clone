@@ -212,14 +212,15 @@ button:hover {
 }
 
 /* Tap menu */
-.tap {
+.tab {
   height: 650px;
   background-color: var(--color-footer);
   position: relative;
   padding-top: 140px;
+  width: 102.4%;
 }
 
-.tap__bottom {
+.tab__bottom {
   background-image: url("image/tap/gnb_sub_txbg.jpeg");
   width: 100%;
   height: 20%;
@@ -228,49 +229,51 @@ button:hover {
   bottom: 0;
 }
 
-.coffee__tap {
-  display: none;
+.coffee__tab {
+  /* display: none; */
+  position: absolute;
+  z-index: 5;
 }
 
-.coffee__tap__top {
+.coffee__tab__top {
   padding-top: 40px;
 }
 
-.coffee__tap__top,
-.coffee__tap__bottom {
+.coffee__tab__top,
+.coffee__tab__bottom {
   color: white;
   width: 100%;
   height: 35%;
   display: flex;
 }
 
-.coffee__tap__top ul {
+.coffee__tab__top ul {
   margin-right: 180px;
 }
 
-.coffee__tap__bottom ul {
+.coffee__tab__bottom ul {
   margin-right: 70px;
 }
 
-.tap__title {
+.tab__title {
   margin-bottom: 15px;
 }
 
-.tap__content {
+.tab__content {
   color: var(--color-line);
   font-size: var(--fonnt-small);
 }
 
-.tap__bottom {
+.tab__bottom {
 }
 
-.tap__bottom__title {
+.tab__bottom__title {
   color: var(--color-line);
   margin-top: 20px;
   margin-left: 40px;
 }
 
-.tap__bottom__content {
+.tab__bottom__content {
   color: var(--color-light-green);
   margin-left: 40px;
 }

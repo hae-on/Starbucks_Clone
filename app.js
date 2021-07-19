@@ -35,19 +35,6 @@ function mouseEnd() {
   }
 }
 
-// // 애니메이션
-// let num = 0;
-// function ani() {
-//   setInterval("console.log(num--);", 100);
-//   let timer = setInterval(function () {
-//     smallNav.style.left = "6px";
-//   }, 20);
-//   console.log(timer);
-//   setInterval(function () {
-//     num++;
-//   }, 300);
-// }
-
 // input값 전송하고 알람창
 function inputSubmit(event) {
   event.preventDefault();

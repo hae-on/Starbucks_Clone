@@ -228,6 +228,10 @@ button:hover {
   bottom: 0;
 }
 
+.coffee__tap {
+  display: none;
+}
+
 .coffee__tap__top {
   padding-top: 40px;
 }

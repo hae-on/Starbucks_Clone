@@ -217,7 +217,7 @@ button:hover {
   background-color: var(--color-footer);
   position: relative;
   padding-top: 140px;
-  width: 102.4%;
+  width: 140%;
 }
 
 .tab__bottom {
@@ -230,7 +230,7 @@ button:hover {
 }
 
 .coffee__tab {
-  /* display: none; */
+  display: none;
   position: absolute;
   z-index: 5;
 }
@@ -248,11 +248,11 @@ button:hover {
 }
 
 .coffee__tab__top ul {
-  margin-right: 180px;
+  margin-right: 100px;
 }
 
 .coffee__tab__bottom ul {
-  margin-right: 70px;
+  margin-right: 0px;
 }
 
 .tab__title {

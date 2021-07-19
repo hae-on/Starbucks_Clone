@@ -75,7 +75,6 @@ button:hover {
 /* navbar */
 .navbar {
   background-color: var(--color-nav);
-  /* display: flex; */
   position: fixed;
   border-top: solid 2px black;
   height: auto;
@@ -182,22 +181,21 @@ button:hover {
   left: -22%;
 }
 
-/* ==== */
 .main__nav {
   display: flex;
   font-size: var(--fonnt-small);
-  margin-bottom: 20px;
 }
 
 .main__nav__items {
   cursor: pointer;
-  padding: 10px 10px 25px 10px;
-  margin-right: 30px;
+  padding: 10px 15px 25px 15px;
+  margin-right: 20px;
 }
 
 .main__nav__items:hover {
   text-decoration: underline;
   color: var(--color-light-green);
+  background-color: var(--color-footer);
 }
 
 /* Nav media */
@@ -242,8 +240,12 @@ button:hover {
   display: flex;
 }
 
-.tap ul {
-  margin-right: 80px;
+.coffee__tap__top ul {
+  margin-right: 180px;
+}
+
+.coffee__tap__bottom ul {
+  margin-right: 70px;
 }
 
 .tap__title {
@@ -253,6 +255,20 @@ button:hover {
 .tap__content {
   color: var(--color-line);
   font-size: var(--fonnt-small);
+}
+
+.tap__bottom {
+}
+
+.tap__bottom__title {
+  color: var(--color-line);
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.tap__bottom__content {
+  color: var(--color-light-green);
+  margin-left: 40px;
 }
 
 /* Main */

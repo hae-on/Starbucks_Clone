@@ -1,4 +1,4 @@
-const mainItems = document.querySelector(".main__nav__items");
+const mainItems = document.querySelectorAll(".main__nav__items");
 const coffeeTab = document.querySelector(".coffee__tab");
 
 function startHover() {
@@ -9,5 +9,8 @@ function endHover() {
   coffeeTab.style.display = "none";
 }
 
-mainItems.addEventListener("mouseover", startHover);
-mainItems.addEventListener("mouseout", endHover);
+for (let i = 0; i < mainItems.length; i++) {
+  let mainItem = mainItems.item(i);
+  mainItem.addEventListener("mouseover", startHover);
+  mainItem.addEventListener("mouseout", endHover);
+}

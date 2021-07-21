@@ -565,19 +565,19 @@ button:hover {
   justify-content: center;
 }
 
-.Papua__coffee__img {
+#Papua__coffee__img {
   margin-top: 80px;
   margin-right: 110px;
 }
 
-.Papua__coffee__img img {
+.Papua__coffee__img__ani {
   position: relative;
   animation: papua_left 2s;
 }
 
 .Papua__coffee__content {
   position: relative;
-  animation: papua_right 2s;
+  animation: papua_right 3.7s;
 }
 
 .Papua__coffee__mini__title {
@@ -633,7 +633,8 @@ button:hover {
 .Brazil__coffee__half__bg {
   position: absolute;
   right: -26%;
-  animation: fadein 3s;
+  opacity: 0;
+  transition: all 500ms ease-in;
 }
 
 .Brazil__coffee__title {

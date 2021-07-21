@@ -675,7 +675,7 @@ button:hover {
 .Pick__menu__content,
 .Pick__menu__btn {
   right: 80%;
-  animation: pick__right 2s;
+  /* animation: pick__right 2s; */
 }
 
 .Pick__menu__title {
@@ -689,8 +689,8 @@ button:hover {
 
 .Pick__menu__img {
   position: absolute;
-  top: -10px;
-  right: 15%;
+  top: 120px;
+  right: 5%;
 }
 
 .Pick__menu__btn {

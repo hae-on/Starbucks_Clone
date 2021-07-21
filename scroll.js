@@ -10,11 +10,20 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// brazil
+// Brazil
 document.addEventListener("scroll", () => {
   if (window.scrollY > 1190) {
     brazilImg.style.opacity = 1;
   }
 });
 
-console.log(papuaImg);
+// Pick menu
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 1517) {
+  }
+});
+
+// document.addEventListener("scroll", () => {
+//   console.log(window.scrollY);
+// });

@@ -102,11 +102,15 @@ button:hover {
   right: -160px;
   font-size: var(--fonnt-small);
   margin-top: 20px;
-  /* transition: all 600ms; */
+}
+
+.small__nav__right {
+  right: 150px;
 }
 
 .small__nav__items,
 .small__nav__no-line {
+  position: relative;
   cursor: pointer;
   padding-left: 18px;
   padding-right: 18px;
@@ -134,28 +138,33 @@ button:hover {
 .nav__input {
   background-color: white;
   border: solid 1px var(--color-light-grey);
-  width: 170px;
-  height: 36px;
+  width: 33px;
+  height: 32px;
   border-radius: 5px;
-  position: relative;
+  position: absolute;
+  right: 0px;
   top: -10px;
-  opacity: 0;
-  /* transition: all 500ms ease-in; */
+  transition: width 400ms ease-in;
   padding: 3px;
+  margin-right: 210px;
 }
+/* 
+.nav__input.show,
+.small__nav__input.show {
+  opacity: 1;
+} */
 
 .small__nav__input {
   position: relative;
   background-color: white;
   color: var(--color-font);
   border: none;
-  width: 120px;
+  width: 0px;
   height: 26px;
   border-radius: 5px;
   top: -2.6px;
   padding-left: 10px;
-  opacity: 0;
-  /* transition: all 500ms ease-in; */
+  transition: width 500ms ease-in;
 }
 
 .input__btn,
@@ -169,16 +178,24 @@ button:hover {
 
 .input__btn {
   border: none;
+  position: relative;
+  top: -2px;
+  transition: all 450ms ease-in;
+  opacity: 0;
 }
 
 .small__nav__btn {
-  background-color: white;
+  background-color: transparent;
   border-radius: 5px;
-  border: solid 1px var(--color-light-grey);
-  display: block;
+  border: none;
+  opacity: 1;
   position: relative;
   top: -8px;
-  left: -22%;
+  right: -6px;
+}
+
+.move__input__btn {
+  left: 100%;
 }
 
 .main__nav {
@@ -669,13 +686,13 @@ button:hover {
   position: relative;
   top: 130px;
   right: -15%;
+  opacity: 0;
 }
 
 .Pick__menu__title,
 .Pick__menu__content,
 .Pick__menu__btn {
   right: 80%;
-  /* animation: pick__right 2s; */
 }
 
 .Pick__menu__title {
@@ -1866,7 +1883,7 @@ button:hover {
     right: 100%;
   }
   100% {
-    right: 80%;
+    right: -15%;
   }
 }
 

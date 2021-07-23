@@ -9,24 +9,34 @@ const navBtn = document.querySelector(".small__nav__btn");
 const navInput = document.querySelector(".small__nav__input");
 const inputBtn = document.querySelector(".input__btn");
 
+function test() {
+  navBtn.classList.add("input__btn");
+  navBtn.classList.remove("small__nav__btn");
+  setTimeout(function () {
+    navBtn.setAttribute("type", "submit");
+  }, 300);
+}
+
+navBtn.addEventListener("click", test);
+
 //클릭 시 input 너비 증가
 function addLength() {
   navInputDiv.style.width = "170px";
   navInput.style.width = "120px";
 }
 
-// 클릭 시 small nav 왼쪽 이동
-function moveLeft() {
-  for (let i = 0; i < smallNavItems.length; i++) {
-    let smallNavItem = smallNavItems.item(i);
-    smallNavItem.classList.add("small__nav__right");
-  }
-  smallNavLastItem.classList.add("small__nav__right");
-}
-
 navBtn.addEventListener("click", addLength);
-navBtn.addEventListener("click", moveLeft);
-// navBtn.addEventListener("click", moveBtn);
+
+// 클릭 시 small nav 왼쪽 이동
+// function moveLeft() {
+//   for (let i = 0; i < smallNavItems.length; i++) {
+//     let smallNavItem = smallNavItems.item(i);
+//     smallNavItem.classList.add("small__nav__right");
+//   }
+//   smallNavLastItem.classList.add("small__nav__right");
+// }
+
+// navBtn.addEventListener("click", moveLeft);
 
 // 길게 클릭 시 버튼으로 복구
 let start = 0;
@@ -58,5 +68,6 @@ function inputSubmit(event) {
 }
 
 navInputForm.addEventListener("submit", inputSubmit);
+inputBtn.addEventListener("submit", inputSubmit);
 inputBtn.addEventListener("mousedown", mouseStart);
 inputBtn.addEventListener("mouseup", mouseEnd);

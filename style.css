@@ -76,7 +76,7 @@ button:hover {
   background-color: var(--color-nav);
   position: fixed;
   border-top: solid 2px black;
-  height: 90px;
+  height: 110px;
   width: 100%;
   max-width: 100%;
   white-space: nowrap;
@@ -89,19 +89,21 @@ button:hover {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  width: 76%;
+  width: 87%;
 }
 
 .nav__content {
   color: var(--color-font);
+  position: relative;
+  right: -5%;
 }
 
 .small__nav {
   display: flex;
   position: absolute;
-  right: 0;
   font-size: var(--fonnt-small);
-  top: 30px;
+  top: -20px;
+  right: -80px;
 }
 
 .small__nav__items,
@@ -139,6 +141,7 @@ button:hover {
   border-radius: 5px;
   position: relative;
   top: -10px;
+  right: 0;
   transition: width 400ms ease-in;
   padding: 3px;
   margin-right: 210px;
@@ -184,10 +187,10 @@ button:hover {
 
 .main__nav {
   display: flex;
-  font-size: var(--fonnt-small);
+  font-size: var(--font-regular);
   position: relative;
   top: 30px;
-  right: -40px;
+  right: 40px;
 }
 
 .main__nav__items {

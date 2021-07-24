@@ -75,8 +75,13 @@ button:hover {
 .Brazil__coffee__half__bg.show,
 .Pick__menu__txt.show,
 #Papua__coffee__img.show,
-.Papua__coffee__content.show {
+.Papua__coffee__content.show,
+.coffee__tab.show {
   opacity: 1;
+}
+
+.coffee__tab.disappear {
+  opacity: 0;
 }
 
 /* navbar */
@@ -236,11 +241,18 @@ button:hover {
 
 /* Tap menu */
 .tab {
-  height: 650px;
+  height: 0;
   background-color: var(--color-footer);
-  position: relative;
+  position: fixed;
   padding-top: 140px;
   width: 140%;
+  overflow: hidden;
+  transition: height 250ms ease-in-out;
+}
+
+.tab__slide {
+  height: 650px;
+  transition: height 250ms ease-in-out;
 }
 
 .tab__bottom {
@@ -253,7 +265,6 @@ button:hover {
 }
 
 .coffee__tab {
-  display: none;
   position: absolute;
   z-index: 5;
 }
@@ -285,9 +296,6 @@ button:hover {
 .tab__content {
   color: var(--color-line);
   font-size: var(--fonnt-small);
-}
-
-.tab__bottom {
 }
 
 .tab__bottom__title {

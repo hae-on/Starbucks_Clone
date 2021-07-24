@@ -71,6 +71,14 @@ button:hover {
   text-decoration: underline;
 }
 
+/* Js class */
+.Brazil__coffee__half__bg.show,
+.Pick__menu__txt.show,
+#Papua__coffee__img.show,
+.Papua__coffee__content.show {
+  opacity: 1;
+}
+
 /* navbar */
 .navbar {
   background-color: var(--color-nav);
@@ -583,6 +591,7 @@ button:hover {
 #Papua__coffee__img {
   margin-top: 80px;
   margin-right: 110px;
+  opacity: 0;
 }
 
 .Papua__coffee__img__ani {
@@ -593,6 +602,7 @@ button:hover {
 .Papua__coffee__content {
   position: relative;
   animation: papua_right 3.7s;
+  opacity: 0;
 }
 
 .Papua__coffee__mini__title {
@@ -676,7 +686,6 @@ button:hover {
   background-image: url("image/Pick__menu/fav_prod_bg_new.jpg");
   height: 790px;
   background-attachment: fixed;
-  background-position: 75% top;
   position: relative;
 }
 
@@ -778,7 +787,6 @@ button:hover {
   top: 30%;
   right: 12%;
   width: 45%;
-  animation: reserve__right 2s;
 }
 
 .Reserve__title img {

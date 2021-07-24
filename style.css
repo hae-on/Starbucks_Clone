@@ -147,6 +147,10 @@ button:hover {
   margin-right: 210px;
 }
 
+.input__div__long {
+  width: 170px;
+}
+
 .small__nav__input {
   position: absolute;
   background-color: white;
@@ -158,6 +162,10 @@ button:hover {
   top: 4px;
   padding-left: 10px;
   transition: width 400ms ease-in;
+}
+
+.input__long {
+  width: 120px;
 }
 
 .input__btn,

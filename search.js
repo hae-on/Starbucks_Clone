@@ -1,14 +1,18 @@
 "use strict";
 
-const smallNav = document.querySelector(".small__nav");
-const smallNavItems = document.querySelectorAll(".small__nav__items");
-const smallNavLastItem = document.querySelector(".small__nav__no-line");
 const navInputForm = document.querySelector(".nav__input__form");
 const navInputDiv = document.querySelector(".nav__input");
 const navBtn = document.querySelector(".small__nav__btn");
 const navInput = document.querySelector(".small__nav__input");
 const inputBtn = document.querySelector(".input__btn");
 
+//클릭 시 input 너비 증가
+function addLength() {
+  navInputDiv.classList.add("input__div__long");
+  navInput.classList.add("input__long");
+}
+
+// 클릭 시 버튼 변경
 function changeBtn() {
   navBtn.classList.add("input__btn");
   navBtn.classList.remove("small__nav__btn");
@@ -17,13 +21,15 @@ function changeBtn() {
   }, 300);
 }
 
-//클릭 시 input 너비 증가
-function addLength() {
-  navInputDiv.style.width = "170px";
-  navInput.style.width = "120px";
+function reverseBtn() {
+  navBtn.classList.remove("input__btn");
+  navBtn.classList.add("small__nav__btn");
+  setTimeout(function () {
+    navBtn.setAttribute("type", "button");
+  }, 300);
 }
 
-// 길게 클릭 시 버튼으로 복구
+// 길게 클릭 시 input -> 버튼으로 복구
 let start = 0;
 function mouseStart() {
   start = Date.now();
@@ -33,11 +39,7 @@ let end = 0;
 function mouseEnd() {
   end = Date.now();
   if (end - start > 1000) {
-    // navInputDiv.style.opacity = 0;
-    // navInput.style.opacity = 0;
-    // navBtn.style.display = "block";
-    // navBtn.style.right = "0%";
-    // smallNav.style.right = "-160px";
+    reverseBtn();
   }
 }
 

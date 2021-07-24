@@ -705,7 +705,12 @@ button:hover {
 .Pick__menu__img {
   position: absolute;
   top: 120px;
-  right: 5%;
+  right: -5%;
+  width: 60%;
+}
+
+.Pick__menu__img img {
+  width: 90%;
 }
 
 .Pick__menu__btn {
@@ -1182,15 +1187,6 @@ button:hover {
   .Brazil__coffee__btn {
     top: 60%;
     right: 60%;
-  }
-
-  /* Pick__menu */
-  .Pick__menu__img {
-    right: 10%;
-  }
-
-  .Pick__menu__img img {
-    width: 87%;
   }
 
   /* footer */

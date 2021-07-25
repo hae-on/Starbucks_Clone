@@ -927,7 +927,6 @@ button:hover {
   font-weight: var(--weight-regular);
   font-size: var(--fonnt-small);
   display: flex;
-
   justify-content: center;
   line-height: 1.7;
   padding-top: 50px;
@@ -1504,11 +1503,11 @@ button:hover {
     background-color: var(--color-footer-title);
     padding: 0;
     color: white;
+    cursor: pointer;
   }
 
   .footer ul {
     padding: 0;
-    background-color: var(--color-footer-list);
     width: 100%;
   }
 
@@ -1538,6 +1537,16 @@ button:hover {
     text-align: left;
     text-indent: 15px;
   }
+
+  .service__m__title:hover,
+  .company__m__title:hover,
+  .corporate__m__title:hover,
+  .partnership__m__title:hover,
+  .community__m__title:hover,
+  .recruit__m__title:hover {
+    text-decoration: underline;
+  }
+
   .service__m__list,
   .company__m__list,
   .corporate__m__list,
@@ -1548,6 +1557,16 @@ button:hover {
     width: 100%;
     text-align: left;
     text-indent: 15px;
+    background-color: var(--color-footer-list);
+  }
+
+  .service__m__list:hover,
+  .company__m__list:hover,
+  .corporate__m__list:hover,
+  .partnership__m__list:hover,
+  .community__m__list:hover,
+  .recruit__m__list:hover {
+    text-decoration: underline;
   }
 
   .footer__logo {

@@ -16,40 +16,34 @@ const recruitBtn = arrowBtn.item(6);
 
 serviceBtn.addEventListener("click", () => {
   for (let i = 0; i < serviceList.length; i++) {
-    serviceList.item(i).classList.remove("disappear");
+    serviceList.item(i).classList.toggle("disappear");
   }
 });
 
 companyBtn.addEventListener("click", () => {
   for (let i = 0; i < companyList.length; i++) {
-    companyList.item(i).classList.remove("disappear");
+    companyList.item(i).classList.toggle("disappear");
   }
 });
 
 corporateBtn.addEventListener("click", () => {
-  corporateList.classList.remove("disappear");
+  corporateList.classList.toggle("disappear");
 });
 
 partnershipBtn.addEventListener("click", () => {
   for (let i = 0; i < partnershipList.length; i++) {
-    partnershipList.item(i).classList.remove("disappear");
-  }
-});
-
-serviceBtn.addEventListener("click", () => {
-  for (let i = 0; i < serviceList.length; i++) {
-    serviceList.item(i).classList.remove("disappear");
+    partnershipList.item(i).classList.toggle("disappear");
   }
 });
 
 onlineBtn.addEventListener("click", () => {
   for (let i = 0; i < onlineList.length; i++) {
-    onlineList.item(i).classList.remove("disappear");
+    onlineList.item(i).classList.toggle("disappear");
   }
 });
 
 recruitBtn.addEventListener("click", () => {
   for (let i = 0; i < recruitList.length; i++) {
-    recruitList.item(i).classList.remove("disappear");
+    recruitList.item(i).classList.toggle("disappear");
   }
 });

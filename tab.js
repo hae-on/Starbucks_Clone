@@ -4,12 +4,12 @@ const tab = document.querySelector(".tab");
 
 function startHover() {
   coffeeTab.classList.add("show");
-  coffeeTab.classList.remove("disappear");
+  coffeeTab.classList.remove("hide");
 }
 
 function endHover() {
   setTimeout(function () {
-    coffeeTab.classList.add("disappear");
+    coffeeTab.classList.add("hide");
   }, 200);
   coffeeTab.classList.remove("show");
 }

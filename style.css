@@ -80,8 +80,21 @@ button:hover {
   opacity: 1;
 }
 
-.coffee__tab.disappear {
+.coffee__tab.hide {
   opacity: 0;
+}
+
+.appear {
+  display: block;
+}
+
+.service__m__list.disappear,
+.company__m__list.disappear,
+.corporate__m__list.disappear,
+.partnership__m__list.disappear,
+.community__m__list.disappear,
+.recruit__m__list.disappear {
+  display: none;
 }
 
 /* navbar */

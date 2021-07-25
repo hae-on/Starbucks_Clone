@@ -8,7 +8,9 @@ function startHover() {
 }
 
 function endHover() {
-  coffeeTab.classList.add("disappear");
+  setTimeout(function () {
+    coffeeTab.classList.add("disappear");
+  }, 200);
   coffeeTab.classList.remove("show");
 }
 

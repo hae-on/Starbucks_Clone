@@ -21,7 +21,7 @@
   --color-brazil: #7f522d;
   --color-footer: #2b2928;
   --color-footer-title: #645952;
-  --color-footer-list: #8a7871;
+  --color-footer-list: #74645f;
 
   /* Border-radius */
   --borer-radius-regular: 5px;
@@ -1077,6 +1077,10 @@ button:hover {
   padding-bottom: 50px;
 }
 
+.footer__m__list {
+  display: none;
+}
+
 @media screen and (max-width: 1400px) {
   /* Store */
   .Store__bg__img__house {
@@ -1487,6 +1491,10 @@ button:hover {
   }
 
   .footer__list {
+    display: none;
+  }
+
+  .footer__m__list {
     position: static;
     display: flex;
     flex-direction: column;
@@ -1495,6 +1503,7 @@ button:hover {
     width: 100%;
     background-color: var(--color-footer-title);
     padding: 0;
+    color: white;
   }
 
   .footer ul {
@@ -1517,23 +1526,24 @@ button:hover {
     right: 3%;
   }
 
-  .company__title,
-  .corpor__title,
-  .community__title,
-  .partner__title,
-  .recquit__title {
+  .service__m__title,
+  .company__m__title,
+  .corporate__m__title,
+  .partnership__m__title,
+  .community__m__title,
+  .recruit__m__title {
     background-color: var(--color-footer-title);
     display: flex;
     justify-content: space-between;
     text-align: left;
     text-indent: 15px;
   }
-
-  .company__list,
-  .corpor__list,
-  .community__list,
-  .partner__list,
-  .recquit__list {
+  .service__m__list,
+  .company__m__list,
+  .corporate__m__list,
+  .partnership__m__list,
+  .community__m__list,
+  .recruit__m__list {
     display: inline-block;
     width: 100%;
     text-align: left;

@@ -530,6 +530,29 @@ button:hover {
   margin-left: 20px;
 }
 
+.banner__arrow {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 100px;
+  position: relative;
+  top: -400px;
+}
+
+.arrow__left,
+.arrow__right {
+  border-radius: 50%;
+  padding: 15px 23px;
+  border: 2px solid black;
+}
+
+.arrow__left {
+  margin-left: 10%;
+}
+
+.arrow__right {
+  margin-right: 10%;
+}
+
 /* Rewards  */
 .Rewards {
   background-color: var(--color-dark-green);

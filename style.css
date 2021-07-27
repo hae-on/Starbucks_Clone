@@ -553,6 +553,23 @@ button:hover {
   margin-right: 10%;
 }
 
+.slide__main__btn {
+  color: black;
+  position: relative;
+  right: -45%;
+  top: -100px;
+  padding: 9px 28px;
+}
+
+.play,
+.off {
+  padding: 6px;
+  border: none;
+  position: relative;
+  right: -46%;
+  top: -70px;
+}
+
 /* Rewards  */
 .Rewards {
   background-color: var(--color-dark-green);

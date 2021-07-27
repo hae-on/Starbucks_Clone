@@ -509,6 +509,27 @@ button:hover {
   color: black;
 }
 
+/* Slide */
+.slide__box {
+  background-color: var(--color-dark-white);
+  /* height: 670px; */
+  height: 50vw;
+  padding-top: 50px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner__img {
+  display: flex;
+  transform: translateX(-550px);
+}
+
+.banner__1,
+.banner__2,
+.banner__3 {
+  margin-left: 20px;
+}
+
 /* Rewards  */
 .Rewards {
   background-color: var(--color-dark-green);

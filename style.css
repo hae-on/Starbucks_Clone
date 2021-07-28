@@ -515,11 +515,16 @@ button:hover {
 }
 
 .slide__box {
-  height: 670px;
-  padding-top: 50px;
+  height: 0;
   width: 100%;
   overflow: hidden;
   position: relative;
+  transition: height 500ms ease-in-out;
+}
+
+.slide__show {
+  height: 700px;
+  transition: height 500ms ease-in-out;
 }
 
 .banner__container {
@@ -530,6 +535,8 @@ button:hover {
 .banner__img {
   display: flex;
   transform: translateX(-1250px);
+  position: relative;
+  top: 50px;
 }
 
 .banner__1,
@@ -568,7 +575,7 @@ button:hover {
   padding: 9px 28px;
 }
 
-.play,
+.play__btn,
 .off {
   padding: 6px;
   border: none;
@@ -1314,9 +1321,14 @@ button:hover {
 
   /* Slide */
   .slide__box {
-    height: 450px;
+    height: 0px;
     width: 80%;
     left: 10%;
+  }
+
+  .slide__show {
+    height: 550px;
+    transition: height 500ms ease-in-out;
   }
 
   .banner__img {
@@ -1325,7 +1337,7 @@ button:hover {
 
   .arrow__left,
   .arrow__right {
-    top: 340px;
+    top: 390px;
   }
 
   .banner__img img {
@@ -1341,13 +1353,14 @@ button:hover {
   }
 
   .slide__main__btn {
-    top: -90px;
+    top: -30px;
     right: 60px;
   }
 
-  .play,
+  .play__btn,
   .off {
     right: 50px;
+    top: -10px;
   }
 }
 

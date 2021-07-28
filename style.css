@@ -512,16 +512,21 @@ button:hover {
 /* Slide */
 .slide__box {
   background-color: var(--color-dark-white);
-  /* height: 670px; */
-  height: 50vw;
+  height: 670px;
   padding-top: 50px;
   width: 100%;
   overflow: hidden;
+  position: relative;
+}
+
+.banner__container {
+  position: relative;
+  left: 50%;
 }
 
 .banner__img {
   display: flex;
-  transform: translateX(-550px);
+  transform: translateX(-1250px);
 }
 
 .banner__1,
@@ -531,8 +536,6 @@ button:hover {
 }
 
 .banner__arrow {
-  display: flex;
-  justify-content: space-between;
   border-radius: 100px;
   position: relative;
   top: -400px;
@@ -540,23 +543,24 @@ button:hover {
 
 .arrow__left,
 .arrow__right {
+  position: relative;
   border-radius: 50%;
   padding: 15px 23px;
   border: 2px solid black;
 }
 
 .arrow__left {
-  margin-left: 10%;
+  right: 550px;
 }
 
 .arrow__right {
-  margin-right: 10%;
+  right: -400px;
 }
 
 .slide__main__btn {
   color: black;
   position: relative;
-  right: -45%;
+  right: 50px;
   top: -100px;
   padding: 9px 28px;
 }
@@ -566,7 +570,7 @@ button:hover {
   padding: 6px;
   border: none;
   position: relative;
-  right: -46%;
+  right: 35px;
   top: -70px;
 }
 

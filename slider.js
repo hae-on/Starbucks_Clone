@@ -1,28 +1,10 @@
-// const a = document.querySelector(".slide__box");
-// const images = document.querySelectorAll(".banner__img img");
-
-// let slideIndex = 0;
-
-// function changeImg() {
-//   for (let i = 0; i < images.length; i++) {
-//     // console.log(images[i]);
-//     images.item(i).style.display = "none";
-//     // 0은 절반 1은 전부 2는 절반
-//     // 1은 절반 2는 전부 0은 절반
-//     // 2는 절반 0은 전부 1은 절반
-//   }
-//   slideIndex++;
-//   if (slideIndex > images.length) {
-//     images[slideIndex - 1].style.display = "block";
-
-//   }
-// }
-// setTimeout(changeImg, 2000);
-// a.addEventListener("click", changeImg);
-
 const noticeBtn = document.querySelector(".Notice__promo__btn");
 const slide = document.querySelector(".slide__box");
 const play = document.querySelector(".play");
+// const off = document.querySelectorAll(".off__btns");
+const offFirst = document.querySelector(".off__1");
+const offSecond = document.querySelector(".off__2");
+const offThird = document.querySelector(".off__3");
 
 // slide 등장 & 사라짐
 function showSlide() {
@@ -40,5 +22,39 @@ function changePlay() {
   }
 }
 
+// off -> on
+let offFirstCount = 0;
+let offSecondCount = 0;
+let offThirdCount = 0;
+function changeFirstOff() {
+  offFirstCount++;
+  if (offFirstCount % 2 == 1) {
+    offFirst.src = "image/Slide/main_prom_on.png";
+  } else {
+    offFirst.src = "image/Slide/main_prom_off.png";
+  }
+}
+
+function changeSecondOff() {
+  offSecondCount++;
+  if (offSecondCount % 2 == 1) {
+    offSecond.src = "image/Slide/main_prom_on.png";
+  } else {
+    offSecond.src = "image/Slide/main_prom_off.png";
+  }
+}
+
+function changeThirdOff() {
+  offThirdCount++;
+  if (offThirdCount % 2 == 1) {
+    offThird.src = "image/Slide/main_prom_on.png";
+  } else {
+    offThird.src = "image/Slide/main_prom_off.png";
+  }
+}
+
 noticeBtn.addEventListener("click", showSlide);
 play.addEventListener("click", changePlay);
+offFirst.addEventListener("click", changeFirstOff);
+offSecond.addEventListener("click", changeSecondOff);
+offThird.addEventListener("click", changeThirdOff);

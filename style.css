@@ -543,7 +543,8 @@ button:hover {
 
 .banner__1,
 .banner__2,
-.banner__3 {
+.banner__3,
+.banner__3__fake {
   margin-right: 20px;
 }
 

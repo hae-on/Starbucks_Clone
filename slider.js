@@ -10,6 +10,7 @@ const firstImage = document.querySelector(".banner__1");
 const secondImage = document.querySelector(".banner__2");
 const thirdImage = document.querySelector(".banner__3");
 const slideImage = document.querySelector(".banner__img");
+const banner = document.querySelectorAll(".banner");
 
 // slide 등장 & 사라짐
 function showSlide() {
@@ -25,8 +26,6 @@ function moveRight() {
   slideImage.style.left = slideImage.offsetLeft - 839.5 + "px";
 }
 
-console.dir(slideImage);
-
 // play -> stop
 let cnt = 0;
 function changePlay() {
@@ -37,6 +36,20 @@ function changePlay() {
     play.src = "image/Slide/main_prom_play.png";
   }
 }
+
+function makeClone() {
+  for (let i = 0; i < banner.length; i++) {
+    let cloneSlide = banner.item(i).cloneNode();
+    slideImage.appendChild(cloneSlide);
+  }
+
+  for (let i = 2; i >= 0; i--) {
+    let cloneSlide = banner.item(i).cloneNode();
+    slideImage.prepend(cloneSlide);
+  }
+}
+
+makeClone();
 
 // off -> on
 let offFirstCount = 0;

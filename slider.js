@@ -30,8 +30,14 @@ function showSlide() {
 }
 
 // play -> stop
+let cnt = 0;
 function changePlay() {
-  play.src = "image/Slide/main_prom_stop.png";
+  cnt++;
+  if (cnt % 2 == 1) {
+    play.src = "image/Slide/main_prom_stop.png";
+  } else {
+    play.src = "image/Slide/main_prom_play.png";
+  }
 }
 
 noticeBtn.addEventListener("click", showSlide);

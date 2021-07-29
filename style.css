@@ -516,7 +516,7 @@ button:hover {
 
 .slide__box {
   height: 0;
-  width: 100%;
+  width: 1678px;
   overflow: hidden;
   position: relative;
   transition: height 500ms ease-in-out;
@@ -524,6 +524,7 @@ button:hover {
 
 .slide__show {
   height: 700px;
+  width: 100%;
   transition: height 500ms ease-in-out;
 }
 
@@ -534,7 +535,8 @@ button:hover {
 
 .banner__img {
   display: flex;
-  transform: translateX(-1250px);
+  left: -429.5px;
+  /* left: -1268.5px; */
   position: relative;
   top: 50px;
 }
@@ -542,7 +544,7 @@ button:hover {
 .banner__1,
 .banner__2,
 .banner__3 {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .banner__arrow {

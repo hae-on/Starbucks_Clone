@@ -1,15 +1,31 @@
 const noticeBtn = document.querySelector(".Notice__promo__btn");
 const slide = document.querySelector(".slide__box");
 const play = document.querySelector(".play");
-// const off = document.querySelectorAll(".off__btns");
 const offFirst = document.querySelector(".off__1");
 const offSecond = document.querySelector(".off__2");
 const offThird = document.querySelector(".off__3");
+const leftArrow = document.querySelector(".arrow__left");
+const rightArrow = document.querySelector(".arrow__right");
+const firstImage = document.querySelector(".banner__1");
+const secondImage = document.querySelector(".banner__2");
+const thirdImage = document.querySelector(".banner__3");
+const slideImage = document.querySelector(".banner__img");
 
 // slide 등장 & 사라짐
 function showSlide() {
   slide.classList.toggle("slide__show");
 }
+
+// arrow 버튼 효과
+function moveLeft() {
+  slideImage.style.left = slideImage.offsetLeft + 839.5 + "px";
+}
+
+function moveRight() {
+  slideImage.style.left = slideImage.offsetLeft - 839.5 + "px";
+}
+
+console.dir(slideImage);
 
 // play -> stop
 let cnt = 0;
@@ -58,3 +74,5 @@ play.addEventListener("click", changePlay);
 offFirst.addEventListener("click", changeFirstOff);
 offSecond.addEventListener("click", changeSecondOff);
 offThird.addEventListener("click", changeThirdOff);
+leftArrow.addEventListener("click", moveLeft);
+rightArrow.addEventListener("click", moveRight);

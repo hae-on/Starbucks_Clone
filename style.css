@@ -538,6 +538,7 @@ button:hover {
   left: -429.5px;
   position: relative;
   top: 50px;
+  transition: left 500ms ease-in-out;
 }
 
 .banner__1,

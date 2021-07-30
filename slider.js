@@ -17,9 +17,12 @@ function showSlide() {
   slide.classList.toggle("slide__show");
 }
 
+let imageWidth = 819;
+let margin = 20;
+
 // arrow 버튼 효과
 function moveLeft() {
-  slideImage.style.left = slideImage.offsetLeft + 839.5 + "px";
+  slideImage.style.left = slideImage.offsetLeft + (imageWidth + margin) + "px";
 }
 
 function moveRight() {
@@ -49,7 +52,14 @@ function makeClone() {
   }
 }
 
+function initialPos() {
+  let imagesLength = -(imageWidth + margin) * 3;
+  console.log(imagesLength);
+  slideImage.style.transform = " translateX(" + imagesLength + "px)";
+}
+
 makeClone();
+initialPos();
 
 // off -> on
 let offFirstCount = 0;

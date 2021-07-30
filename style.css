@@ -538,6 +538,9 @@ button:hover {
   left: -429.5px;
   position: relative;
   top: 50px;
+}
+
+.slide__animate {
   transition: left 500ms ease-in-out;
 }
 

@@ -12,34 +12,15 @@ const thirdImage = document.querySelector(".banner__3");
 const slideImage = document.querySelector(".banner__img");
 const banner = document.querySelectorAll(".banner");
 
+let imageWidth = 819;
+let margin = 20;
+
 // slide 등장 & 사라짐
 function showSlide() {
   slide.classList.toggle("slide__show");
 }
 
-let imageWidth = 819;
-let margin = 20;
-
-// arrow 버튼 효과
-function moveLeft() {
-  slideImage.style.left = slideImage.offsetLeft + (imageWidth + margin) + "px";
-}
-
-function moveRight() {
-  slideImage.style.left = slideImage.offsetLeft - 839.5 + "px";
-}
-
-// play -> stop
-let cnt = 0;
-function changePlay() {
-  cnt++;
-  if (cnt % 2 == 1) {
-    play.src = "image/Slide/main_prom_stop.png";
-  } else {
-    play.src = "image/Slide/main_prom_play.png";
-  }
-}
-
+// 이미지 앞 뒤로 clone
 function makeClone() {
   for (let i = 0; i < banner.length; i++) {
     let cloneSlide = banner.item(i).cloneNode();
@@ -52,14 +33,53 @@ function makeClone() {
   }
 }
 
+makeClone();
+initialPos();
+setTimeout(function () {
+  slideImage.classList.add("slide__animate");
+}, 100);
+
+// 이미지 위치 초기값
 function initialPos() {
   let imagesLength = -(imageWidth + margin) * 3;
-  console.log(imagesLength);
   slideImage.style.transform = " translateX(" + imagesLength + "px)";
 }
 
-makeClone();
-initialPos();
+let moveCnt = 0;
+let imageCount = banner.length;
+
+// arrow 버튼 효과
+function moveLeft() {
+  slideImage.style.left = slideImage.offsetLeft + (imageWidth + margin) + "px";
+  moveCnt--;
+}
+
+function moveRight() {
+  slideImage.style.left = slideImage.offsetLeft - 839.5 + "px";
+  moveCnt++;
+  if (moveCnt == imageCount) {
+    setTimeout(function () {
+      slideImage.classList.remove("slide__animate");
+      slideImage.style.left = "-429.5px";
+      moveCnt = 0;
+    }, 500);
+    // 0.1초 후 class 다시 원상복구
+    setTimeout(function () {
+      slideImage.classList.add("slide__animate");
+    }, 600);
+  }
+}
+
+// play -> stop
+let cnt = 0;
+function changePlay() {
+  cnt++;
+  if (cnt % 2 == 1) {
+    play.src = "image/Slide/main_prom_stop.png";
+  } else {
+    play.src = "image/Slide/main_prom_play.png";
+  }
+}
 
 // off -> on
 let offFirstCount = 0;

@@ -30,7 +30,11 @@ function makeClone() {
   for (let i = 2; i >= 0; i--) {
     let cloneSlide = banner.item(i).cloneNode();
     slideImage.prepend(cloneSlide);
+    cloneSlide.classList.add("clone__left");
   }
+
+  let cloneFirstBanner = document.querySelector(".clone__left");
+  cloneFirstBanner.before(banner.item(2).cloneNode());
 }
 
 makeClone();
@@ -41,7 +45,7 @@ setTimeout(function () {
 
 // 이미지 위치 초기값
 function initialPos() {
-  let imagesLength = -(imageWidth + margin) * 3;
+  let imagesLength = -(imageWidth + margin) * 4;
   slideImage.style.transform = " translateX(" + imagesLength + "px)";
 }
 
@@ -50,13 +54,26 @@ let imageCount = banner.length;
 
 // arrow 버튼 효과
 function moveLeft() {
-  slideImage.style.left = slideImage.offsetLeft + (imageWidth + margin) + "px";
+  slideImage.style.left = slideImage.offsetLeft + 839.5 + "px";
   moveCnt--;
+  if (moveCnt == -imageCount) {
+    setTimeout(function () {
+      slideImage.classList.remove("slide__animate");
+      // slideImage.style.left = "-429.5px";
+      slideImage.style.left = "-429.5px";
+      moveCnt = 0;
+    }, 500);
+    // 0.1초 후 class 다시 원상복구
+    setTimeout(function () {
+      slideImage.classList.add("slide__animate");
+    }, 600);
+  }
 }
 
 function moveRight() {
   slideImage.style.left = slideImage.offsetLeft - 839.5 + "px";
   moveCnt++;
+
   if (moveCnt == imageCount) {
     setTimeout(function () {
       slideImage.classList.remove("slide__animate");
@@ -68,6 +85,8 @@ function moveRight() {
       slideImage.classList.add("slide__animate");
     }, 600);
   }
+
+  console.log(moveCnt);
 }
 
 // play -> stop

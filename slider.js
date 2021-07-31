@@ -59,7 +59,6 @@ function moveLeft() {
   if (moveCnt == -imageCount) {
     setTimeout(function () {
       slideImage.classList.remove("slide__animate");
-      // slideImage.style.left = "-429.5px";
       slideImage.style.left = "-429.5px";
       moveCnt = 0;
     }, 500);
@@ -85,8 +84,6 @@ function moveRight() {
       slideImage.classList.add("slide__animate");
     }, 600);
   }
-
-  console.log(moveCnt);
 }
 
 // play -> stop
@@ -138,3 +135,6 @@ offSecond.addEventListener("click", changeSecondOff);
 offThird.addEventListener("click", changeThirdOff);
 leftArrow.addEventListener("click", moveLeft);
 rightArrow.addEventListener("click", moveRight);
+noticeBtn.addEventListener("click", () => {
+  setInterval(moveRight, 3000);
+});

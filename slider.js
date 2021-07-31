@@ -20,6 +20,15 @@ function showSlide() {
   slide.classList.toggle("slide__show");
 }
 
+// 이미지 위치 초기값
+function initialPos() {
+  let imagesLength = -(imageWidth + margin) * 4;
+  slideImage.style.transform = " translateX(" + imagesLength + "px)";
+}
+
+let moveCnt = 0;
+let imageCount = banner.length;
+
 // 이미지 앞 뒤로 clone
 function makeClone() {
   for (let i = 0; i < banner.length; i++) {
@@ -37,20 +46,9 @@ function makeClone() {
   cloneFirstBanner.before(banner.item(2).cloneNode());
 }
 
-makeClone();
-initialPos();
 setTimeout(function () {
   slideImage.classList.add("slide__animate");
 }, 100);
-
-// 이미지 위치 초기값
-function initialPos() {
-  let imagesLength = -(imageWidth + margin) * 4;
-  slideImage.style.transform = " translateX(" + imagesLength + "px)";
-}
-
-let moveCnt = 0;
-let imageCount = banner.length;
 
 // arrow 버튼 효과
 function moveLeft() {
@@ -72,7 +70,6 @@ function moveLeft() {
 function moveRight() {
   slideImage.style.left = slideImage.offsetLeft - 839.5 + "px";
   moveCnt++;
-
   if (moveCnt == imageCount) {
     setTimeout(function () {
       slideImage.classList.remove("slide__animate");
@@ -86,14 +83,25 @@ function moveRight() {
   }
 }
 
+function startSlide() {
+  moveslide = setInterval(moveRight, 3000);
+}
+
+function stopSlide() {
+  clearInterval(moveslide);
+}
+
 // play -> stop
-let cnt = 0;
+let clickCnt = 0;
 function changePlay() {
-  cnt++;
-  if (cnt % 2 == 1) {
-    play.src = "image/Slide/main_prom_stop.png";
-  } else {
+  clickCnt++;
+  if (clickCnt % 2 == 1) {
     play.src = "image/Slide/main_prom_play.png";
+    stopSlide();
+  } else if (clickCnt % 2 == 0) {
+    play.src = "image/Slide/main_prom_stop.png";
+    setTimeout(moveRight, 500);
+    startSlide();
   }
 }
 
@@ -128,6 +136,9 @@ function changeThirdOff() {
   }
 }
 
+initialPos();
+makeClone();
+
 noticeBtn.addEventListener("click", showSlide);
 play.addEventListener("click", changePlay);
 offFirst.addEventListener("click", changeFirstOff);
@@ -135,6 +146,4 @@ offSecond.addEventListener("click", changeSecondOff);
 offThird.addEventListener("click", changeThirdOff);
 leftArrow.addEventListener("click", moveLeft);
 rightArrow.addEventListener("click", moveRight);
-noticeBtn.addEventListener("click", () => {
-  setInterval(moveRight, 3000);
-});
+noticeBtn.addEventListener("click", startSlide);

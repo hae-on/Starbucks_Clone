@@ -68,18 +68,12 @@ function moveLeft() {
     }, 600);
   }
   // 이미지 변경 시 원 아이콘 변경
-  if (moveCnt === -1) {
-    offThird.src = "image/Slide/main_prom_on.png";
-    offSecond.src = "image/Slide/main_prom_off.png";
-    offFirst.src = "image/Slide/main_prom_off.png";
+  if (moveCnt === -3) {
+    changeFirstIcon();
   } else if (moveCnt === -2) {
-    offThird.src = "image/Slide/main_prom_off.png";
-    offSecond.src = "image/Slide/main_prom_on.png";
-    offFirst.src = "image/Slide/main_prom_off.png";
-  } else if (moveCnt === -3) {
-    offThird.src = "image/Slide/main_prom_off.png";
-    offSecond.src = "image/Slide/main_prom_off.png";
-    offFirst.src = "image/Slide/main_prom_on.png";
+    changeSecondIcon();
+  } else if (moveCnt === -1) {
+    changeThirdIcon();
   }
 }
 
@@ -99,19 +93,33 @@ function moveRight() {
       slideImage.classList.add("slide__animate");
     }, 600);
   }
-  if (moveCnt === 2) {
-    offThird.src = "image/Slide/main_prom_on.png";
-    offSecond.src = "image/Slide/main_prom_off.png";
-    offFirst.src = "image/Slide/main_prom_off.png";
+  // 이동에 따른 아이콘 변경
+  if (moveCnt === 3) {
+    changeFirstIcon();
   } else if (moveCnt === 1) {
-    offThird.src = "image/Slide/main_prom_off.png";
-    offSecond.src = "image/Slide/main_prom_on.png";
-    offFirst.src = "image/Slide/main_prom_off.png";
-  } else if (moveCnt === 3) {
-    offThird.src = "image/Slide/main_prom_off.png";
-    offSecond.src = "image/Slide/main_prom_off.png";
-    offFirst.src = "image/Slide/main_prom_on.png";
+    changeSecondIcon();
+  } else if (moveCnt === 2) {
+    changeThirdIcon();
   }
+}
+
+// 아이콘 변경
+function changeFirstIcon() {
+  offFirst.src = "image/Slide/main_prom_on.png";
+  offSecond.src = "image/Slide/main_prom_off.png";
+  offThird.src = "image/Slide/main_prom_off.png";
+}
+
+function changeSecondIcon() {
+  offThird.src = "image/Slide/main_prom_off.png";
+  offSecond.src = "image/Slide/main_prom_on.png";
+  offFirst.src = "image/Slide/main_prom_off.png";
+}
+
+function changeThirdIcon() {
+  offThird.src = "image/Slide/main_prom_on.png";
+  offSecond.src = "image/Slide/main_prom_off.png";
+  offFirst.src = "image/Slide/main_prom_off.png";
 }
 
 function startSlide() {
@@ -144,7 +152,7 @@ let offThirdCount = 0;
 function changeFirstOff() {
   offFirstCount++;
   if (offFirstCount % 2 == 1) {
-    offFirst.src = "image/Slide/main_prom_on.png";
+    changeFirstIcon();
   } else {
     offFirst.src = "image/Slide/main_prom_off.png";
   }
@@ -153,7 +161,7 @@ function changeFirstOff() {
 function changeSecondOff() {
   offSecondCount++;
   if (offSecondCount % 2 == 1) {
-    offSecond.src = "image/Slide/main_prom_on.png";
+    changeSecondIcon();
   } else {
     offSecond.src = "image/Slide/main_prom_off.png";
   }
@@ -162,7 +170,7 @@ function changeSecondOff() {
 function changeThirdOff() {
   offThirdCount++;
   if (offThirdCount % 2 == 1) {
-    offThird.src = "image/Slide/main_prom_on.png";
+    changeThirdIcon();
   } else {
     offThird.src = "image/Slide/main_prom_off.png";
   }

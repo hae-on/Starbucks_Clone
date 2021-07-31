@@ -54,6 +54,8 @@ setTimeout(function () {
 function moveLeft() {
   slideImage.style.left = slideImage.offsetLeft + 839.5 + "px";
   moveCnt--;
+  stopSlide();
+  startSlide();
   if (moveCnt == -imageCount) {
     setTimeout(function () {
       slideImage.classList.remove("slide__animate");

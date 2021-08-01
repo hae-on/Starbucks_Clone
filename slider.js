@@ -76,6 +76,38 @@ function moveLeft() {
   } else if (moveCnt === -1) {
     changeThirdIcon();
   }
+
+  // 이동에 따른 투명도 변경
+  if (moveCnt == 1) {
+    banner[1].classList.remove("slide__opacity");
+    banner[2].classList.add("slide__opacity");
+  }
+  if (moveCnt == 0) {
+    banner[0].classList.remove("slide__opacity");
+    banner[1].classList.add("slide__opacity");
+  }
+
+  if (moveCnt == -1) {
+    banner[1].classList.add("slide__opacity");
+    cloneLeft[2].classList.remove("slide__opacity");
+    banner[0].classList.add("slide__opacity");
+    cloneLeft[1].classList.add("slide__opacity");
+  }
+
+  if (moveCnt == -2) {
+    cloneLeft[0].classList.add("slide__opacity");
+    cloneLeft[1].classList.remove("slide__opacity");
+    cloneLeft[2].classList.add("slide__opacity");
+  }
+
+  if (moveCnt == -3) {
+    banner[2].classList.add("slide__opacity");
+    banner[0].classList.remove("slide__opacity");
+    cloneLeft[0].classList.remove("slide__opacity");
+    cloneLeft[1].classList.add("slide__opacity");
+  }
+
+  // console.log("왼쪽 " + moveCnt);
 }
 
 function moveRight() {
@@ -103,6 +135,17 @@ function moveRight() {
     changeThirdIcon();
   }
 
+  // 이동에 따른 투명도 변경
+  if (moveCnt == -1) {
+    cloneLeft[2].classList.remove("slide__opacity");
+    cloneLeft[1].classList.add("slide__opacity");
+  }
+
+  if (moveCnt == 0) {
+    banner[0].classList.remove("slide__opacity");
+    cloneLeft[2].classList.add("slide__opacity");
+  }
+
   if (moveCnt == 1) {
     banner[0].classList.add("slide__opacity");
     banner[1].classList.remove("slide__opacity");
@@ -123,7 +166,7 @@ function moveRight() {
     cloneRight[0].classList.remove("slide__opacity");
   }
 
-  // console.log(moveCnt);
+  // console.log("오른쪽" + moveCnt);
 }
 
 // 아이콘 변경

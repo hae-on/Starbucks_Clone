@@ -540,6 +540,10 @@ button:hover {
   top: 50px;
 }
 
+.slide__opacity {
+  opacity: 0.4;
+}
+
 .slide__animate {
   transition: left 500ms ease-in-out;
 }

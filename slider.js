@@ -34,6 +34,7 @@ function makeClone() {
   for (let i = 0; i < banner.length; i++) {
     let cloneSlide = banner.item(i).cloneNode();
     slideImage.appendChild(cloneSlide);
+    cloneSlide.classList.add("clone__right");
   }
 
   for (let i = 2; i >= 0; i--) {
@@ -101,6 +102,28 @@ function moveRight() {
   } else if (moveCnt === 2) {
     changeThirdIcon();
   }
+
+  if (moveCnt == 1) {
+    banner[0].classList.add("slide__opacity");
+    banner[1].classList.remove("slide__opacity");
+    banner[2].classList.add("slide__opacity");
+  }
+
+  if (moveCnt == 2) {
+    banner[1].classList.add("slide__opacity");
+    banner[2].classList.remove("slide__opacity");
+    banner[0].classList.add("slide__opacity");
+    cloneRight[0].classList.add("slide__opacity");
+  }
+
+  if (moveCnt == 3) {
+    banner[2].classList.add("slide__opacity");
+    banner[0].classList.remove("slide__opacity");
+    banner[1].classList.add("slide__opacity");
+    cloneRight[0].classList.remove("slide__opacity");
+  }
+
+  // console.log(moveCnt);
 }
 
 // 아이콘 변경
@@ -179,6 +202,10 @@ function changeThirdOff() {
 initialPos();
 makeClone();
 
+// 투명도 조절에 필요한 clone 요소 (위쪽에 적을 수 없음)
+cloneRight = document.querySelectorAll(".clone__right");
+cloneLeft = document.querySelectorAll(".clone__left");
+
 noticeBtn.addEventListener("click", showSlide);
 play.addEventListener("click", changePlay);
 offFirst.addEventListener("click", changeFirstOff);
@@ -187,3 +214,5 @@ offThird.addEventListener("click", changeThirdOff);
 leftArrow.addEventListener("click", moveLeft);
 rightArrow.addEventListener("click", moveRight);
 noticeBtn.addEventListener("click", startSlide);
+
+console.log(cloneLeft[2]);

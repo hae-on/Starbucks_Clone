@@ -1,9 +1,6 @@
 const noticeBtn = document.querySelector(".Notice__promo__btn");
 const slide = document.querySelector(".slide__box");
 const play = document.querySelector(".play");
-const offFirst = document.querySelector(".off__1");
-const offSecond = document.querySelector(".off__2");
-const offThird = document.querySelector(".off__3");
 const leftArrow = document.querySelector(".arrow__left");
 const rightArrow = document.querySelector(".arrow__right");
 const firstImage = document.querySelector(".banner__1");
@@ -11,6 +8,7 @@ const secondImage = document.querySelector(".banner__2");
 const thirdImage = document.querySelector(".banner__3");
 const slideImage = document.querySelector(".banner__img");
 const banner = document.querySelectorAll(".banner");
+const checkBox = document.querySelectorAll("input[type=checkbox]");
 
 let imageWidth = 819;
 let margin = 20;
@@ -26,12 +24,15 @@ function initialPos() {
   slideImage.style.transform = " translateX(" + imagesLength + "px)";
 }
 
+// 슬라이드 시작 시 첫번째 checkbox checked
+changeFirstIcon();
+
 let moveCnt = 0;
 let imageCount = banner.length;
 
 // 이미지 앞 뒤로 clone
 function makeClone() {
-  for (let i = 0; i < banner.length; i++) {
+  for (let i = 0; i < imageCount; i++) {
     let cloneSlide = banner.item(i).cloneNode();
     slideImage.appendChild(cloneSlide);
     cloneSlide.classList.add("clone__right");
@@ -127,6 +128,7 @@ function moveRight() {
     }, 600);
   }
   // 이동에 따른 아이콘 변경
+
   if (moveCnt === 3) {
     changeFirstIcon();
   } else if (moveCnt === 1) {
@@ -171,21 +173,21 @@ function moveRight() {
 
 // 아이콘 변경
 function changeFirstIcon() {
-  offFirst.src = "image/Slide/main_prom_on.png";
-  offSecond.src = "image/Slide/main_prom_off.png";
-  offThird.src = "image/Slide/main_prom_off.png";
+  checkBox[0].checked = true;
+  checkBox[1].checked = false;
+  checkBox[2].checked = false;
 }
 
 function changeSecondIcon() {
-  offThird.src = "image/Slide/main_prom_off.png";
-  offSecond.src = "image/Slide/main_prom_on.png";
-  offFirst.src = "image/Slide/main_prom_off.png";
+  checkBox[1].checked = true;
+  checkBox[0].checked = false;
+  checkBox[2].checked = false;
 }
 
 function changeThirdIcon() {
-  offThird.src = "image/Slide/main_prom_on.png";
-  offSecond.src = "image/Slide/main_prom_off.png";
-  offFirst.src = "image/Slide/main_prom_off.png";
+  checkBox[2].checked = true;
+  checkBox[0].checked = false;
+  checkBox[1].checked = false;
 }
 
 function startSlide() {
@@ -210,37 +212,57 @@ function changePlay() {
   }
 }
 
-// off -> on
-let offFirstCount = 0;
-let offSecondCount = 0;
-let offThirdCount = 0;
+// const offButton = document.querySelectorAll(".off img");
 
-function changeFirstOff() {
-  offFirstCount++;
-  if (offFirstCount % 2 == 1) {
-    changeFirstIcon();
-  } else {
-    offFirst.src = "image/Slide/main_prom_off.png";
-  }
-}
+// // off -> on
+// for (let k = 0; k < offButton.length; k++) {
+//   offButton[k].onclick = function () {
+//     offButton[k].src = "image/Slide/main_prom_on.png";
+//   };
+// }
 
-function changeSecondOff() {
-  offSecondCount++;
-  if (offSecondCount % 2 == 1) {
-    changeSecondIcon();
-  } else {
-    offSecond.src = "image/Slide/main_prom_off.png";
-  }
-}
+// 버튼이 0에 있을 때 1번 or 2번 클릭시 moveright
+// 버튼이 1에 있을 때 0번 클릭 시 moveleft, 2번 클릭시 moveright
+// 버튼이 2에 있을 때 0번 or 1번 클릭시 moveleft
 
-function changeThirdOff() {
-  offThirdCount++;
-  if (offThirdCount % 2 == 1) {
-    changeThirdIcon();
-  } else {
-    offThird.src = "image/Slide/main_prom_off.png";
-  }
-}
+// let offFirstCount = 0;
+// let offSecondCount = 0;
+// let offThirdCount = 0;
+
+// offFirst.addEventListener("click", changeFirstOff);
+// offSecond.addEventListener("click", changeSecondOff);
+// offThird.addEventListener("click", changeThirdOff);
+
+// let third = false;
+
+// function changeFirstOff() {
+//   offFirstCount++;
+//   if (offFirstCount % 2 == 1) {
+//     changeFirstIcon();
+
+//   } else {
+//     offFirst.src = "image/Slide/main_prom_off.png";
+//   }
+// }
+
+// function changeSecondOff() {
+//   offSecondCount++;
+//   if (offSecondCount % 2 == 1) {
+//     changeSecondIcon();
+//   } else {
+//     offSecond.src = "image/Slide/main_prom_off.png";
+//   }
+// }
+
+// function changeThirdOff() {
+//   offThirdCount++;
+//   third = true;
+//   if (offThirdCount % 2 == 1) {
+//     changeThirdIcon();
+//   } else {
+//     offThird.src = "image/Slide/main_prom_off.png";
+//   }
+// }
 
 initialPos();
 makeClone();
@@ -251,11 +273,6 @@ cloneLeft = document.querySelectorAll(".clone__left");
 
 noticeBtn.addEventListener("click", showSlide);
 play.addEventListener("click", changePlay);
-offFirst.addEventListener("click", changeFirstOff);
-offSecond.addEventListener("click", changeSecondOff);
-offThird.addEventListener("click", changeThirdOff);
 leftArrow.addEventListener("click", moveLeft);
 rightArrow.addEventListener("click", moveRight);
 noticeBtn.addEventListener("click", startSlide);
-
-console.log(cloneLeft[2]);

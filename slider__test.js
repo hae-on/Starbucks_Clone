@@ -13,6 +13,7 @@ const checkBox = document.querySelectorAll("input[type=checkbox]");
 let imageWidth = 819;
 let margin = 20;
 let currentIndex = 0;
+let imageCount = banner.length;
 
 // slide 등장 & 사라짐
 function showSlide() {
@@ -33,8 +34,6 @@ function goToSlide(idx) {
 }
 
 // 이미지 앞 뒤로 clone
-let imageCount = banner.length;
-
 function makeClone() {
   for (let i = 0; i < imageCount; i++) {
     let cloneSlide = banner.item(i).cloneNode();
@@ -77,6 +76,35 @@ function loop() {
   }, 600);
 }
 
+// slide 아이콘 변경
+function changeIcon() {
+  if (currentIndex === -3 || currentIndex === 0 || currentIndex === 3) {
+    changeFirstIcon();
+  } else if (currentIndex === -2 || currentIndex === 1) {
+    changeSecondIcon();
+  } else if (currentIndex === -1 || currentIndex === 2) {
+    changeThirdIcon();
+  }
+}
+
+function changeFirstIcon() {
+  checkBox[0].checked = true;
+  checkBox[1].checked = false;
+  checkBox[2].checked = false;
+}
+
+function changeSecondIcon() {
+  checkBox[1].checked = true;
+  checkBox[0].checked = false;
+  checkBox[2].checked = false;
+}
+
+function changeThirdIcon() {
+  checkBox[2].checked = true;
+  checkBox[0].checked = false;
+  checkBox[1].checked = false;
+}
+
 makeClone();
 initialPos();
 
@@ -84,8 +112,10 @@ noticeBtn.addEventListener("click", showSlide);
 rightArrow.addEventListener("click", () => {
   goToSlide(currentIndex + 1);
   loopSlide();
+  changeIcon();
 });
 leftArrow.addEventListener("click", () => {
   goToSlide(currentIndex - 1);
   loopSlide();
+  changeIcon();
 });

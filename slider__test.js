@@ -111,7 +111,7 @@ function changeThirdIcon() {
 // 투명도 조절에 필요한 clone 요소 (위쪽에 적을 수 없음)
 const cloneRight = document.querySelector(".clone__right");
 const cloneLeft = document.querySelectorAll(".clone__left");
-console.log(cloneRight);
+
 // 투명도 조절
 function controlOpacity() {
   if (currentIndex === 1) {
@@ -128,6 +128,20 @@ function controlOpacity() {
     banner[0].classList.remove("slide__opacity");
     banner[1].classList.add("slide__opacity");
     cloneRight.classList.remove("slide__opacity");
+  } else if (currentIndex === -1) {
+    banner[1].classList.add("slide__opacity");
+    banner[0].classList.add("slide__opacity");
+    cloneLeft[1].classList.add("slide__opacity");
+    cloneLeft[2].classList.remove("slide__opacity");
+  } else if (currentIndex === -2) {
+    cloneLeft[0].classList.add("slide__opacity");
+    cloneLeft[1].classList.remove("slide__opacity");
+    cloneLeft[2].classList.add("slide__opacity");
+  } else if (currentIndex === -3) {
+    banner[2].classList.add("slide__opacity");
+    banner[0].classList.remove("slide__opacity");
+    cloneLeft[0].classList.remove("slide__opacity");
+    cloneLeft[1].classList.add("slide__opacity");
   }
 }
 
@@ -144,4 +158,5 @@ leftArrow.addEventListener("click", () => {
   loopSlide();
   changeIcon();
   controlOpacity();
+  console.log(currentIndex);
 });

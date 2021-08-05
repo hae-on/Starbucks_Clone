@@ -1,15 +1,3 @@
-// const noticeBtn = document.querySelector(".Notice__promo__btn");
-// const slide = document.querySelector(".slide__box");
-// const play = document.querySelector(".play");
-// const leftArrow = document.querySelector(".arrow__left");
-// const rightArrow = document.querySelector(".arrow__right");
-// const firstImage = document.querySelector(".banner__1");
-// const secondImage = document.querySelector(".banner__2");
-// const thirdImage = document.querySelector(".banner__3");
-// const slideImage = document.querySelector(".banner__img");
-// const banner = document.querySelectorAll(".banner");
-// const checkBox = document.querySelectorAll("input[type=checkbox]");
-
 // let imageWidth = 819;
 // let margin = 20;
 
@@ -18,81 +6,6 @@
 
 // let moveCnt = 0;
 // let imageCount = banner.length;
-
-// // arrow 버튼 효과
-// function moveLeft() {
-//   slideImage.style.left = slideImage.offsetLeft + 839.5 + "px";
-//   moveLeftCnt--;
-//   stopSlide();
-//   startSlide();
-
-//   // 이동에 따른 투명도 변경
-//   if (moveLeftCnt == 1) {
-//     banner[1].classList.remove("slide__opacity");
-//     banner[2].classList.add("slide__opacity");
-//   }
-//   if (moveLeftCnt == 0) {
-//     banner[0].classList.remove("slide__opacity");
-//     banner[1].classList.add("slide__opacity");
-//   }
-
-//   if (moveLeftCnt == -1) {
-//     banner[1].classList.add("slide__opacity");
-//     cloneLeft[2].classList.remove("slide__opacity");
-//     banner[0].classList.add("slide__opacity");
-//     cloneLeft[1].classList.add("slide__opacity");
-//   }
-
-//   if (moveLeftCnt == -2) {
-//     cloneLeft[0].classList.add("slide__opacity");
-//     cloneLeft[1].classList.remove("slide__opacity");
-//     cloneLeft[2].classList.add("slide__opacity");
-//   }
-
-//   if (moveLeftCnt == -3) {
-//     banner[2].classList.add("slide__opacity");
-//     banner[0].classList.remove("slide__opacity");
-//     cloneLeft[0].classList.remove("slide__opacity");
-//     cloneLeft[1].classList.add("slide__opacity");
-//   }
-
-//
-// }
-
-// function moveRight() {
-//
-//   // 이동에 따른 투명도 변경
-//   if (moveCnt == -1) {
-//     cloneLeft[2].classList.remove("slide__opacity");
-//     cloneLeft[1].classList.add("slide__opacity");
-//   }
-
-//   if (moveCnt == 0) {
-//     banner[0].classList.remove("slide__opacity");
-//     cloneLeft[2].classList.add("slide__opacity");
-//   }
-
-//   if (moveCnt == 1) {
-//     banner[0].classList.add("slide__opacity");
-//     banner[1].classList.remove("slide__opacity");
-//     banner[2].classList.add("slide__opacity");
-//   }
-
-//   if (moveCnt == 2) {
-//     banner[1].classList.add("slide__opacity");
-//     banner[2].classList.remove("slide__opacity");
-//     banner[0].classList.add("slide__opacity");
-//     cloneRight[0].classList.add("slide__opacity");
-//   }
-
-//   if (moveCnt == 3) {
-//     banner[2].classList.add("slide__opacity");
-//     banner[0].classList.remove("slide__opacity");
-//     banner[1].classList.add("slide__opacity");
-//     cloneRight[0].classList.remove("slide__opacity");
-//   }
-
-// }
 
 // function startSlide() {
 //   moveslide = setInterval(moveRight, 3000);

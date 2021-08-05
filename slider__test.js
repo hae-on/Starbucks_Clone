@@ -51,6 +51,9 @@ function makeClone() {
   cloneFirstBanner.before(banner.item(2).cloneNode());
 }
 
+makeClone();
+initialPos();
+
 setTimeout(function () {
   slideImage.classList.add("slide__animate");
 }, 100);
@@ -105,17 +108,40 @@ function changeThirdIcon() {
   checkBox[1].checked = false;
 }
 
-makeClone();
-initialPos();
+// 투명도 조절에 필요한 clone 요소 (위쪽에 적을 수 없음)
+const cloneRight = document.querySelector(".clone__right");
+const cloneLeft = document.querySelectorAll(".clone__left");
+console.log(cloneRight);
+// 투명도 조절
+function controlOpacity() {
+  if (currentIndex === 1) {
+    banner[0].classList.add("slide__opacity");
+    banner[1].classList.remove("slide__opacity");
+    banner[2].classList.add("slide__opacity");
+  } else if (currentIndex === 2) {
+    banner[1].classList.add("slide__opacity");
+    banner[2].classList.remove("slide__opacity");
+    banner[0].classList.add("slide__opacity");
+    cloneRight.classList.add("slide__opacity");
+  } else if (currentIndex === 3) {
+    banner[2].classList.add("slide__opacity");
+    banner[0].classList.remove("slide__opacity");
+    banner[1].classList.add("slide__opacity");
+    cloneRight.classList.remove("slide__opacity");
+  }
+}
 
 noticeBtn.addEventListener("click", showSlide);
 rightArrow.addEventListener("click", () => {
   goToSlide(currentIndex + 1);
   loopSlide();
   changeIcon();
+  controlOpacity();
+  console.log(currentIndex);
 });
 leftArrow.addEventListener("click", () => {
   goToSlide(currentIndex - 1);
   loopSlide();
   changeIcon();
+  controlOpacity();
 });

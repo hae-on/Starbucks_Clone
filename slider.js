@@ -13,13 +13,11 @@
 // let imageWidth = 819;
 // let margin = 20;
 
-
 // // 슬라이드 시작 시 첫번째 checkbox checked
 // // changeFirstIcon();
 
 // let moveCnt = 0;
 // let imageCount = banner.length;
-
 
 // // arrow 버튼 효과
 // function moveLeft() {
@@ -27,17 +25,6 @@
 //   moveLeftCnt--;
 //   stopSlide();
 //   startSlide();
-//   
-//   // 이미지 변경 시 원 아이콘 변경
-//   if (moveLeftCnt === -3) {
-//     changeFirstIcon();
-//   } else if (moveLeftCnt === -2) {
-//     changeSecondIcon();
-//   } else if (moveLeftCnt === -1) {
-//     changeThirdIcon();
-//     // } else if (moveLeftCnt === 0) {
-//     //   changeFirstIcon();
-//   }
 
 //   // 이동에 따른 투명도 변경
 //   if (moveLeftCnt == 1) {
@@ -69,35 +56,11 @@
 //     cloneLeft[1].classList.add("slide__opacity");
 //   }
 
-//   console.log("왼쪽 " + moveLeftCnt);
+//
 // }
 
 // function moveRight() {
-//   slideImage.style.left = slideImage.offsetLeft - 839.5 + "px";
-//   moveCnt++;
-//   stopSlide();
-//   startSlide();
-//   if (moveCnt == imageCount) {
-//     setTimeout(function () {
-//       slideImage.classList.remove("slide__animate");
-//       slideImage.style.left = "-429.5px";
-//       moveCnt = 0;
-//     }, 500);
-//     // 0.1초 후 class 다시 원상복구
-//     setTimeout(function () {
-//       slideImage.classList.add("slide__animate");
-//     }, 600);
-//   }
-//   // 이동에 따른 아이콘 변경
-
-//   if (moveCnt === 3) {
-//     changeFirstIcon();
-//   } else if (moveCnt === 1) {
-//     changeSecondIcon();
-//   } else if (moveCnt === 2) {
-//     changeThirdIcon();
-//   }
-
+//
 //   // 이동에 따른 투명도 변경
 //   if (moveCnt == -1) {
 //     cloneLeft[2].classList.remove("slide__opacity");
@@ -129,26 +92,6 @@
 //     cloneRight[0].classList.remove("slide__opacity");
 //   }
 
-//   console.log("오른쪽" + moveCnt);
-// }
-
-// // 아이콘 변경
-// function changeFirstIcon() {
-//   checkBox[0].checked = true;
-//   checkBox[1].checked = false;
-//   checkBox[2].checked = false;
-// }
-
-// function changeSecondIcon() {
-//   checkBox[1].checked = true;
-//   checkBox[0].checked = false;
-//   checkBox[2].checked = false;
-// }
-
-// function changeThirdIcon() {
-//   checkBox[2].checked = true;
-//   checkBox[0].checked = false;
-//   checkBox[1].checked = false;
 // }
 
 // function startSlide() {

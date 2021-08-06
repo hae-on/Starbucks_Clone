@@ -53,6 +53,7 @@ function makeClone() {
 
 makeClone();
 initialPos();
+changeFirstIcon();
 
 setTimeout(function () {
   slideImage.classList.add("slide__animate");
@@ -143,8 +144,6 @@ function controlOpacity() {
     cloneLeft[0].classList.remove("slide__opacity");
     cloneLeft[1].classList.add("slide__opacity");
   }
-
-  console.log(currentIndex);
 }
 
 noticeBtn.addEventListener("click", showSlide);

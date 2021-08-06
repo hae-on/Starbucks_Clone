@@ -20,17 +20,17 @@ function showSlide() {
   slide.classList.toggle("slide__show");
 }
 
-// 이미지 위치 초기값
-function initialPos() {
-  let imagesLength = -(imageWidth + margin) * 4;
-  slideImage.style.transform = " translateX(" + imagesLength + "px)";
-}
-
 // 슬라이드 이동
 function goToSlide(idx) {
   slideImage.classList.add("animated");
   slideImage.style.left = -429.5 - 839.5 * idx + "px";
   currentIndex = idx;
+}
+
+// 이미지 위치 초기값
+function initialPos() {
+  let imagesLength = -(imageWidth + margin) * 4;
+  slideImage.style.transform = " translateX(" + imagesLength + "px)";
 }
 
 // 이미지 앞 뒤로 clone
@@ -123,7 +123,7 @@ function controlOpacity() {
     banner[2].classList.remove("slide__opacity");
     banner[0].classList.add("slide__opacity");
     cloneRight.classList.add("slide__opacity");
-  } else if (currentIndex === 3) {
+  } else if (currentIndex === 3 || currentIndex === 0) {
     banner[2].classList.add("slide__opacity");
     banner[0].classList.remove("slide__opacity");
     banner[1].classList.add("slide__opacity");
@@ -143,6 +143,8 @@ function controlOpacity() {
     cloneLeft[0].classList.remove("slide__opacity");
     cloneLeft[1].classList.add("slide__opacity");
   }
+
+  console.log(currentIndex);
 }
 
 noticeBtn.addEventListener("click", showSlide);

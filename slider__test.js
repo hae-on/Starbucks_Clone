@@ -3,17 +3,13 @@ const slide = document.querySelector(".slide__box");
 const play = document.querySelector(".play");
 const leftArrow = document.querySelector(".arrow__left");
 const rightArrow = document.querySelector(".arrow__right");
-const firstImage = document.querySelector(".banner__1");
-const secondImage = document.querySelector(".banner__2");
-const thirdImage = document.querySelector(".banner__3");
 const slideImage = document.querySelector(".banner__img");
 const banner = document.querySelectorAll(".banner");
 const checkBox = document.querySelectorAll("input[type=checkbox]");
 
-let imageWidth = 819;
-let margin = 20;
 let currentIndex = 0;
 let imageCount = banner.length;
+let originLeft = -1269;
 
 // slide 등장 & 사라짐
 function showSlide() {
@@ -23,7 +19,7 @@ function showSlide() {
 // 슬라이드 이동
 function goToSlide(idx) {
   slideImage.classList.add("animated");
-  slideImage.style.left = -1269 - 839.5 * idx + "px";
+  slideImage.style.left = originLeft - 839.5 * idx + "px";
   currentIndex = idx;
 }
 

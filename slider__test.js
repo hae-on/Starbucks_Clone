@@ -27,17 +27,35 @@ function goToSlide(idx) {
   currentIndex = idx;
 }
 
-// // 이미지 위치 초기값
-// function initialPos() {
-//   let imagesLength = -(imageWidth + margin) * 4;
-//   slideImage.style.transform = " translateX(" + imagesLength + "px)";
-// }
+// 오른쪽으로 이동
+function moveRight() {
+  goToSlide(currentIndex + 1);
+  loopSlide();
+  changeIcon();
+  controlOpacity();
+}
 
-// initialPos();
+// 왼쪽으로 이동
+function moveLeft() {
+  goToSlide(currentIndex - 1);
+  loopSlide();
+  changeIcon();
+  controlOpacity();
+}
 
 setTimeout(function () {
   slideImage.classList.add("slide__animate");
 }, 100);
+
+// 슬라이드 자동 실행
+function startSlide() {
+  moveslide = setInterval(moveRight, 3000);
+}
+
+// 슬라이드 자동 실행 정지
+function stopSlide() {
+  clearInterval(moveslide);
+}
 
 function leftLoop() {
   setTimeout(function () {
@@ -71,7 +89,20 @@ function loopSlide() {
   }
 }
 
-loopSlide();
+// play -> stop
+let clickCnt = 0;
+function changePlay() {
+  clickCnt++;
+  console.log(clickCnt);
+  if (clickCnt % 2 == 1) {
+    play.src = "image/Slide/main_prom_play.png";
+    stopSlide();
+  } else if (clickCnt % 2 == 0) {
+    play.src = "image/Slide/main_prom_stop.png";
+    setTimeout(moveRight, 500);
+    startSlide();
+  }
+}
 
 // slide 아이콘 변경
 function changeIcon() {
@@ -83,20 +114,6 @@ function changeIcon() {
     changeThirdIcon();
   }
 }
-
-// // play -> stop
-// let clickCnt = 0;
-// function changePlay() {
-//   clickCnt++;
-//   if (clickCnt % 2 == 1) {
-//     play.src = "image/Slide/main_prom_play.png";
-//     stopSlide();
-//   } else if (clickCnt % 2 == 0) {
-//     play.src = "image/Slide/main_prom_stop.png";
-//     setTimeout(moveRight, 500);
-//     startSlide();
-//   }
-// }
 
 // slide circle icon
 function changeFirstIcon() {
@@ -193,20 +210,18 @@ function moveIcon() {
 
 moveIcon();
 changeFirstIcon();
+startSlide();
+loopSlide();
 
 noticeBtn.addEventListener("click", showSlide);
 rightArrow.addEventListener("click", () => {
-  goToSlide(currentIndex + 1);
-  loopSlide();
-  changeIcon();
-  controlOpacity();
-  console.log(currentIndex);
+  moveRight();
 });
 
 leftArrow.addEventListener("click", () => {
-  goToSlide(currentIndex - 1);
-  loopSlide();
-  changeIcon();
-  controlOpacity();
-  console.log(currentIndex);
+  moveLeft();
+});
+
+play.addEventListener("click", () => {
+  changePlay();
 });

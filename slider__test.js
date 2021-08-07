@@ -210,18 +210,10 @@ function moveIcon() {
 
 moveIcon();
 changeFirstIcon();
-startSlide();
 loopSlide();
 
 noticeBtn.addEventListener("click", showSlide);
-rightArrow.addEventListener("click", () => {
-  moveRight();
-});
-
-leftArrow.addEventListener("click", () => {
-  moveLeft();
-});
-
-play.addEventListener("click", () => {
-  changePlay();
-});
+noticeBtn.addEventListener("click", startSlide);
+rightArrow.addEventListener("click", moveRight);
+leftArrow.addEventListener("click", moveLeft);
+play.addEventListener("click", changePlay);

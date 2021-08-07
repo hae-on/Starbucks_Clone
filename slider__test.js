@@ -57,6 +57,7 @@ function stopSlide() {
   clearInterval(moveslide);
 }
 
+// 무한 루프 loop
 function leftLoop() {
   setTimeout(function () {
     slideImage.classList.remove("slide__animate");
@@ -181,30 +182,17 @@ function moveThirdImage() {
 
 function moveIcon() {
   if ((checkBox[0].checked = true)) {
-    checkBox[1].addEventListener("click", () => {
-      moveSecondImage();
-    });
-    checkBox[2].addEventListener("click", () => {
-      moveThirdImage();
-    });
+    checkBox[1].addEventListener("click", moveSecondImage);
+    checkBox[2].addEventListener("click", moveThirdImage);
   }
   if ((checkBox[1].checked = true)) {
-    checkBox[0].addEventListener("click", () => {
-      moveFirstImage();
-    });
-    checkBox[2].addEventListener("click", () => {
-      moveThirdImage();
-    });
+    checkBox[0].addEventListener("click", moveFirstImage);
+    checkBox[2].addEventListener("click", moveThirdImage);
   }
 
   if ((checkBox[2].checked = true)) {
-    checkBox[0].addEventListener("click", () => {
-      moveFirstImage();
-    });
-
-    checkBox[1].addEventListener("click", () => {
-      moveSecondImage();
-    });
+    checkBox[0].addEventListener("click", moveFirstImage);
+    checkBox[1].addEventListener("click", moveSecondImage);
   }
 }
 

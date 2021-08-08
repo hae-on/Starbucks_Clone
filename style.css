@@ -1603,6 +1603,11 @@ input[type="checkbox"]:checked + label {
     display: flex;
   }
 
+  .mobile__menu {
+    background-color: black;
+    width: 40%;
+  }
+
   /* Badge */
   .badge {
     right: 10px;

@@ -1606,7 +1606,36 @@ input[type="checkbox"]:checked + label {
   /* mobile menu */
   .mobile__menu {
     background-color: black;
-    width: 40%;
+    width: 80%;
+    padding-top: 100px;
+    /* float: right; */
+  }
+
+  .m__input__form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu__input {
+    width: 60%;
+    height: 50px;
+    margin-left: 30px;
+    font-size: var(--font-title);
+    padding-left: 10px;
+  }
+
+  .menu__btn {
+    background-color: var(--color-font);
+    color: white;
+    width: 20%;
+    height: 57px;
+    margin-right: 30px;
+    font-size: var(--font-more-large);
+    border-radius: var(--borer-radius-regular);
+  }
+
+  .menu__btn:hover {
+    text-decoration: underline;
   }
 
   .My__Starbucks__m,
@@ -1616,6 +1645,9 @@ input[type="checkbox"]:checked + label {
   .Starbucks__Rewards__m,
   .WHATS__NEW__m {
     color: white;
+    font-size: var(--font-title);
+    margin: 10px;
+    padding-top: 20px;
   }
 
   /* Badge */

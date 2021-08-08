@@ -1603,9 +1603,19 @@ input[type="checkbox"]:checked + label {
     display: flex;
   }
 
+  /* mobile menu */
   .mobile__menu {
     background-color: black;
     width: 40%;
+  }
+
+  .My__Starbucks__m,
+  .COFFEE__m,
+  .STORE__m,
+  .RESPONSIBILITY__m,
+  .Starbucks__Rewards__m,
+  .WHATS__NEW__m {
+    color: white;
   }
 
   /* Badge */

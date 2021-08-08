@@ -31,6 +31,7 @@
 
   /* Font */
   --font-title: 35px;
+  --font-small-large: 27px;
   --font-more-large: 22px;
   --font-large: 20px;
   --font-more-regular: 18px;
@@ -55,6 +56,7 @@ body {
 
 ul {
   list-style: none;
+  padding-inline-start: 0;
 }
 
 button {
@@ -1604,23 +1606,41 @@ input[type="checkbox"]:checked + label {
   }
 
   /* mobile menu */
+  .fa-times {
+    position: absolute;
+    font-size: 60px;
+    color: white;
+    left: -15%;
+    top: 5%;
+    cursor: pointer;
+  }
+
+  /* .fa-times:hover {
+    transform: rotate(180deg);
+  } */
+
   .mobile__menu {
     background-color: black;
-    width: 80%;
-    padding-top: 100px;
-    /* float: right; */
+    height: 100%;
+    padding-bottom: 50px;
+    position: fixed;
+    z-index: 1999;
+    right: 0;
   }
 
   .m__input__form {
     display: flex;
     justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--color-footer);
   }
 
   .menu__input {
     width: 60%;
     height: 50px;
     margin-left: 30px;
-    font-size: var(--font-title);
+    font-size: var(--font-small-large);
     padding-left: 10px;
   }
 
@@ -1645,9 +1665,54 @@ input[type="checkbox"]:checked + label {
   .Starbucks__Rewards__m,
   .WHATS__NEW__m {
     color: white;
-    font-size: var(--font-title);
-    margin: 10px;
-    padding-top: 20px;
+    font-size: var(--font-small-large);
+    padding-bottom: 15px;
+  }
+
+  .My__Starbucks__m__list:hover,
+  .COFFEE__m__list:hover,
+  .STORE__m__list:hover,
+  .RESPONSIBILITY__m__list:hover,
+  .Starbucks__Rewards__m__list:hover,
+  .WHATS__NEW__m__list:hover {
+    text-decoration: underline;
+  }
+
+  .m__title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-bottom: 30px;
+    border-bottom: solid 1px #1a1a1a;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+  }
+
+  .m__title:hover {
+    text-decoration: underline;
+  }
+
+  .fa-chevron-down {
+    margin-right: 40px;
+  }
+
+  .My__Starbucks__m__list,
+  .COFFEE__m__list,
+  .STORE__m__list,
+  .RESPONSIBILITY__m__list,
+  .Starbucks__Rewards__m__list,
+  .WHATS__NEW__m__list {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    cursor: pointer;
+    border-bottom: solid 1px #1a1a1a;
+    padding-left: 30px;
+  }
+
+  .My__Starbucks {
+    background-color: var(--color-footer);
+    border: none;
   }
 
   /* Badge */

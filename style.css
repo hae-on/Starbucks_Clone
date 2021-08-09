@@ -333,6 +333,16 @@ button:hover {
   margin-left: 40px;
 }
 
+/* mobile menu */
+.My__Starbucks__m,
+.COFFEE__m,
+.STORE__m,
+.RESPONSIBILITY__m,
+.Starbucks__Rewards__m,
+.WHATS__NEW__m {
+  display: none;
+}
+
 /* Main */
 /* Badge */
 .badge {
@@ -1702,6 +1712,7 @@ input[type="checkbox"]:checked + label {
     color: white;
     font-size: var(--font-small-large);
     padding-bottom: 15px;
+    display: block;
   }
 
   .My__Starbucks__m__list:hover,

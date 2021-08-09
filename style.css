@@ -96,7 +96,13 @@ button:hover {
 .partnership__m__list.disappear,
 .community__m__list.disappear,
 .recruit__m__list.disappear,
-.mobile__menu.disappear {
+.mobile__menu.disappear,
+.My__Starbucks__m__list.disappear,
+.COFFEE__m__list.disappear,
+.STORE__m__list.disappear,
+.RESPONSIBILITY__m__list.disappear,
+.Starbucks__Rewards__m__list.disappear,
+.WHATS__NEW__m__list.disappear {
   display: none;
 }
 
@@ -1615,10 +1621,11 @@ input[type="checkbox"]:checked + label {
     left: -15%;
     top: 5%;
     cursor: pointer;
+    z-index: 20000;
   }
 
   /* .fa-times:hover {
-    transform: rotate(180deg);
+    transform: rotate(180deg) 500ms ease;
   } */
 
   .mobile__menu {
@@ -1627,6 +1634,11 @@ input[type="checkbox"]:checked + label {
     padding-bottom: 50px;
     position: fixed;
     z-index: 1999;
+  }
+
+  .mobile__menu__inner {
+    height: 100%;
+    overflow: auto;
   }
 
   .menu__hide {

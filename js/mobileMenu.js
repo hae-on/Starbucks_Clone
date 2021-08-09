@@ -3,8 +3,14 @@ const menu = document.querySelector(".mobile__menu");
 const close = document.querySelector(".fa-times");
 const dim = document.querySelector(".mobile__menu__dim");
 
-const arrowMobileBtn = document.querySelectorAll(".fa-chevron-down");
+// 검색창
+const searchInput = document.querySelector(".menu__input");
+const searchBtn = document.querySelector(".menu__btn");
+const searchForm = document.querySelector(".menu__form");
+
 // arrow button
+const arrowMobileBtn = document.querySelectorAll(".fa-chevron-down");
+
 const starbucksBtn = arrowMobileBtn.item(0);
 const coffeeBtn = arrowMobileBtn.item(1);
 const storeBtn = arrowMobileBtn.item(2);
@@ -32,6 +38,20 @@ close.addEventListener("click", () => {
   menu.classList.remove("menu__show");
   dim.classList.remove("menu__show");
 });
+
+// search
+// input값 전송하고 알람창
+function inputSubmit(event) {
+  event.preventDefault();
+  const search = searchInput.value;
+  if (search !== "") {
+    alert(`${search} 은(는) 검색할 수 없습니다. 다른 검색어를 입력해주세요.`);
+  } else {
+    alert("검색어를 입력하세요.");
+  }
+}
+
+searchForm.addEventListener("submit", inputSubmit);
 
 // list
 starbucksBtn.addEventListener("click", () => {

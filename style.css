@@ -1663,7 +1663,7 @@ input[type="checkbox"]:checked + label {
     transition: right 400ms ease-in;
   }
 
-  .m__input__form {
+  .menu__form {
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
@@ -1918,6 +1918,33 @@ input[type="checkbox"]:checked + label {
   /* Badge */
   .badge {
     width: 26%;
+  }
+
+  /* mobile menu */
+  .menu__form {
+    justify-content: center;
+  }
+
+  .menu__input {
+    width: 40%;
+    height: 35px;
+    margin-right: 10px;
+    font-size: var(--font-more-regular);
+  }
+
+  .menu__btn {
+    width: 90px;
+    height: 45px;
+    font-size: var(--font-more-regular);
+  }
+
+  .My__Starbucks__m,
+  .COFFEE__m,
+  .STORE__m,
+  .RESPONSIBILITY__m,
+  .Starbucks__Rewards__m,
+  .WHATS__NEW__m {
+    font-size: var(--font-more-regular);
   }
 
   /* New__menu */

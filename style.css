@@ -95,7 +95,8 @@ button:hover {
 .corporate__m__list.disappear,
 .partnership__m__list.disappear,
 .community__m__list.disappear,
-.recruit__m__list.disappear {
+.recruit__m__list.disappear,
+.mobile__menu.disappear {
   display: none;
 }
 
@@ -248,6 +249,7 @@ button:hover {
   right: 0px;
   font-size: var(--font-title);
   color: var(--color-brown);
+  cursor: pointer;
 }
 
 .media__icon {
@@ -1625,7 +1627,16 @@ input[type="checkbox"]:checked + label {
     padding-bottom: 50px;
     position: fixed;
     z-index: 1999;
-    right: 0;
+  }
+
+  .menu__hide {
+    right: -100%;
+    transition: right 700ms ease-in;
+  }
+
+  .menu__show {
+    right: 0%;
+    transition: right 700ms ease-in;
   }
 
   .m__input__form {

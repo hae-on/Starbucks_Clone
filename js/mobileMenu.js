@@ -1,6 +1,7 @@
 const menuIcon = document.querySelector(".fa-bars");
 const menu = document.querySelector(".mobile__menu");
 const close = document.querySelector(".fa-times");
+const dim = document.querySelector(".mobile__menu__dim");
 
 const arrowMobileBtn = document.querySelectorAll(".fa-chevron-down");
 // arrow button
@@ -23,11 +24,13 @@ const newList = document.querySelectorAll(".WHATS__NEW__m__list");
 menuIcon.addEventListener("click", () => {
   menu.classList.add("menu__show");
   menu.classList.remove("menu__hide");
+  dim.classList.add("menu__show");
 });
 
 close.addEventListener("click", () => {
   menu.classList.add("menu__hide");
   menu.classList.remove("menu__show");
+  dim.classList.remove("menu__show");
 });
 
 // list

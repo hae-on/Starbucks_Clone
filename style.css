@@ -102,7 +102,8 @@ button:hover {
 .STORE__m__list.disappear,
 .RESPONSIBILITY__m__list.disappear,
 .Starbucks__Rewards__m__list.disappear,
-.WHATS__NEW__m__list.disappear {
+.WHATS__NEW__m__list.disappear,
+.mobile__menu__dim.disappear {
   display: none;
 }
 
@@ -1628,6 +1629,15 @@ input[type="checkbox"]:checked + label {
     transform: rotate(180deg) 500ms ease;
   } */
 
+  .mobile__menu__dim {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    opacity: 0.7;
+  }
+
   .mobile__menu {
     background-color: black;
     height: 100%;
@@ -1643,12 +1653,12 @@ input[type="checkbox"]:checked + label {
 
   .menu__hide {
     right: -100%;
-    transition: right 700ms ease-in;
+    transition: right 400ms ease-in;
   }
 
   .menu__show {
     right: 0%;
-    transition: right 700ms ease-in;
+    transition: right 400ms ease-in;
   }
 
   .m__input__form {

@@ -486,6 +486,11 @@ button:hover {
   display: flex;
   justify-content: center;
   margin-top: 12px;
+  position: relative;
+}
+
+.title__content {
+  display: flex;
 }
 
 .banner__contents {
@@ -500,6 +505,10 @@ button:hover {
   top: -2px;
 }
 
+.fa-volume-up {
+  opacity: 0;
+}
+
 .banner__content {
   margin-bottom: 30px;
   margin-right: 30px;
@@ -509,8 +518,8 @@ button:hover {
   color: var(--color-dark-white);
   border: solid 1px var(--color-dark-white);
   position: absolute;
-  right: 56%;
-  top: 17px;
+  right: 20px;
+  top: -10px;
 }
 
 .Notice__banner__btn,
@@ -1802,15 +1811,27 @@ input[type="checkbox"]:checked + label {
     margin: 0;
   }
 
+  .banner__content {
+    margin-top: 10px;
+  }
+
+  .Notice__banner__title {
+    margin-top: 10px;
+  }
+
   .Notice__banner__btn {
-    right: 0;
-    position: static;
+    right: 60px;
+    top: -2px;
   }
 
   .Notice__promo {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .promo__icon {
+    margin-left: 10px;
   }
 }
 
@@ -2052,6 +2073,38 @@ input[type="checkbox"]:checked + label {
     top: -45%;
     width: 60%;
     left: 20%;
+  }
+
+  /* notice */
+  .Notice__banner__title {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .title__span {
+    opacity: 0;
+  }
+
+  .fa-volume-up {
+    opacity: 1;
+  }
+
+  .Notice__banner__container {
+    display: block;
+  }
+
+  .banner__content {
+    margin-left: 30px;
+    position: relative;
+    font-size: var(--font-more-regular);
+  }
+
+  .Notice__banner__btn {
+    right: 10%;
+  }
+
+  .Notice__promo__title {
+    font-size: var(--font-more-large);
   }
 
   /* Rewards  */

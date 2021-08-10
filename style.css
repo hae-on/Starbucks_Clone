@@ -1334,23 +1334,35 @@ input[type="checkbox"]:checked + label {
 @media screen and (max-width: 1100px) {
   /* Papua */
   .Papua__coffee__bg {
-    height: 50vw;
+    /* height: 50vw; */
+    height: 500px;
     background-position: 80% center;
   }
 
   .Papua__coffee__container {
-    height: 50vw;
+    /* height: 50vw; */
+    height: 450px;
     white-space: nowrap;
   }
 
-  .Papua__coffee__img {
-    margin: 0;
-
-    padding-left: 30px;
+  #Papua__coffee__img {
+    margin-right: 40px;
   }
 
-  .Papua__coffee__img img {
-    width: 85%;
+  #Papua__coffee__img img {
+    width: 180px;
+  }
+
+  .Papua__coffee__mini__title {
+    font-size: var(--font-small-large);
+  }
+
+  .Papua__coffee__title {
+    font-size: var(--font-more-large);
+  }
+
+  .Papua__coffee__intro {
+    font-size: var(--font-regular);
   }
 
   /* Brazil__coffee */
@@ -2190,7 +2202,7 @@ input[type="checkbox"]:checked + label {
 
   /* Papua__coffee */
   .Papua__coffee__bg {
-    height: 180vw;
+    height: 1150px;
     background-image: url("image/Papua__coffee/2021_m_summer2_bean_bg.jpeg");
     background-position: center;
     background-repeat: no-repeat;
@@ -2204,7 +2216,7 @@ input[type="checkbox"]:checked + label {
     height: auto;
   }
 
-  .Papua__coffee__img {
+  #Papua__coffee__img {
     margin-top: 27%;
     margin-right: 0;
     margin-bottom: 15%;

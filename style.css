@@ -466,6 +466,7 @@ button:hover {
   display: flex;
   width: 100%;
   position: relative;
+  white-space: nowrap;
 }
 
 .Notice__banner,
@@ -484,14 +485,19 @@ button:hover {
 .Notice__banner__container {
   display: flex;
   justify-content: center;
-  position: relative;
   margin-top: 12px;
+}
+
+.banner__contents {
+  width: 300px;
 }
 
 .Notice__banner__title {
   font-size: var(--font-large);
   margin-right: 50px;
-  margin-left: 100px;
+  margin-left: 60px;
+  position: relative;
+  top: -2px;
 }
 
 .banner__content {

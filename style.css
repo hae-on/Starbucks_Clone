@@ -1292,6 +1292,7 @@ input[type="checkbox"]:checked + label {
 
   .Store__btn {
     left: 200px;
+    white-space: nowrap;
   }
 
   .Store__bg__img__house {
@@ -1535,6 +1536,7 @@ input[type="checkbox"]:checked + label {
     top: 86%;
     left: 50%;
     margin-left: -55px;
+    white-space: nowrap;
   }
 
   /* Pick__menu  */

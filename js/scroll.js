@@ -45,5 +45,3 @@ document.addEventListener("scroll", () => {
     storeTxt.style.animation = "store__left 2s";
   }
 });
-
-console.log(window.scrollY);

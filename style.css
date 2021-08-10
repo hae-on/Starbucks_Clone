@@ -966,7 +966,6 @@ input[type="checkbox"]:checked + label {
   right: 20%;
   border: none;
   width: 50%;
-  animation: reserve__btn__right 2s;
 }
 
 .Reserve__btn img {

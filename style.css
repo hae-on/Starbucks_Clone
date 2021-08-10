@@ -478,32 +478,33 @@ button:hover {
 .Notice__banner {
   background-color: var(--color-notice);
   color: white;
+  overflow: hidden;
 }
 
 .Notice__banner__container {
   display: flex;
-  align-items: center;
   justify-content: center;
   position: relative;
-  margin-left: 15px;
-  margin-top: 7px;
-  white-space: nowrap;
+  margin-top: 12px;
 }
 
 .Notice__banner__title {
   font-size: var(--font-large);
+  margin-right: 50px;
+  margin-left: 100px;
 }
 
-.Notice__banner__content {
-  margin-left: 20px;
-  margin-right: 160px;
+.banner__content {
+  margin-bottom: 30px;
+  margin-right: 30px;
 }
 
 .Notice__banner__btn {
   color: var(--color-dark-white);
   border: solid 1px var(--color-dark-white);
   position: absolute;
-  right: 3%;
+  right: 56%;
+  top: 17px;
 }
 
 .Notice__banner__btn,

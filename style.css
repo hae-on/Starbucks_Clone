@@ -893,7 +893,6 @@ input[type="checkbox"]:checked + label {
 .Pick__menu__btn {
   position: absolute;
   top: 460px;
-
   border: solid 2px white;
 }
 

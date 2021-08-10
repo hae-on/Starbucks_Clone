@@ -1035,7 +1035,6 @@ input[type="checkbox"]:checked + label {
   position: relative;
   top: -20px;
   left: 400px;
-  animation: store__left 2s;
 }
 
 .Store__title {

@@ -42,6 +42,8 @@ document.addEventListener("scroll", () => {
 // Store
 document.addEventListener("scroll", () => {
   if (window.scrollY > 2990) {
-    storeTxt.style.animation = "store__left 2s;";
+    storeTxt.style.animation = "store__left 2s";
   }
 });
+
+console.log(window.scrollY);

@@ -1343,7 +1343,6 @@ input[type="checkbox"]:checked + label {
   }
 
   .Papua__coffee__container {
-    /* height: 50vw; */
     height: 450px;
     white-space: nowrap;
   }
@@ -2228,8 +2227,8 @@ input[type="checkbox"]:checked + label {
 
   #Papua__coffee__img {
     margin-top: 27%;
-    margin-right: 0;
     margin-bottom: 15%;
+    margin-right: -2%;
     width: 30%;
   }
 
@@ -2291,6 +2290,10 @@ input[type="checkbox"]:checked + label {
 }
 
 @media screen and (max-width: 600px) {
+  #Papua__coffee__img {
+    margin-right: 2%;
+  }
+  /* store */
   .Store__img {
     top: 17px;
   }
@@ -2319,6 +2322,11 @@ input[type="checkbox"]:checked + label {
 }
 
 @media screen and (max-width: 550px) {
+  /* papua */
+  .Papua__coffee__bg {
+    height: 900px;
+  }
+
   /* Slide */
   .slide__box {
     width: 100%;

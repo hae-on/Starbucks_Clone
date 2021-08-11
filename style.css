@@ -1952,6 +1952,12 @@ input[type="checkbox"]:checked + label {
     height: 500px;
   }
 
+  /* Slide */
+  .slide__box {
+    width: 100%;
+    left: 7%;
+  }
+
   /* Store */
   .Store__bg__img__house {
     left: 30%;
@@ -2275,6 +2281,12 @@ input[type="checkbox"]:checked + label {
     display: flex;
     flex-direction: column;
   }
+
+  /* Slide */
+  .slide__box {
+    width: 100%;
+    left: 4.5%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -2309,7 +2321,7 @@ input[type="checkbox"]:checked + label {
   /* Slide */
   .slide__box {
     width: 100%;
-    left: 0%;
+    left: 1.5%;
   }
 
   .banner__arrow {

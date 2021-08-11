@@ -16,11 +16,22 @@ function showSlide() {
   slide.classList.toggle("slide__show");
 }
 
+// 반응형 초기 값
+if (window.matchMedia("(max-width: 1100px)").matches) {
+  slideImage.style.left = "500px";
+}
+
 // 슬라이드 이동
 function goToSlide(idx) {
-  slideImage.classList.add("animated");
-  slideImage.style.left = originLeft - 839.5 * idx + "px";
+  if (window.matchMedia("(max-width: 1100px)").matches) {
+    slideImage.style.left = 500 - 520 * idx + "px";
+  } else {
+    slideImage.classList.add("animated");
+    slideImage.style.left = originLeft - 839.5 * idx + "px";
+  }
+  // console.log(slideImage.offsetLeft);
   currentIndex = idx;
+  // console.log(currentIndex);
 }
 
 // 오른쪽으로 이동
@@ -56,11 +67,13 @@ function stopSlide() {
 // 무한 루프 loop
 function leftLoop() {
   setTimeout(function () {
-    slideImage.classList.remove("slide__animate");
     slideImage.style.left = "-429.5px";
+    slideImage.classList.remove("slide__animate");
+
     goToSlide(2);
   }, 500);
-  // // 0.1초 후 class 다시 원상복구
+
+  // 0.1초 후 class 다시 원상복구
   setTimeout(function () {
     slideImage.classList.add("slide__animate");
   }, 600);
@@ -194,7 +207,7 @@ function moveIcon() {
 
 moveIcon();
 changeFirstIcon();
-loopSlide();
+// loopSlide();
 
 noticeBtn.addEventListener("click", showSlide);
 noticeBtn.addEventListener("click", startSlide);

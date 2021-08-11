@@ -1315,6 +1315,10 @@ input[type="checkbox"]:checked + label {
     display: flex;
     justify-content: center;
   }
+
+  .off__btns {
+    top: -33px;
+  }
 }
 
 @media screen and (max-width: 1200px) {

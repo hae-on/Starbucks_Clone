@@ -1,4 +1,4 @@
-const arrowBtn = document.querySelectorAll(".fa-chevron-down");
+const arrowBtn = document.querySelectorAll(".footer__arrow");
 // list 목록
 const serviceList = document.querySelectorAll(".service__m__list");
 const companyList = document.querySelectorAll(".company__m__list");
@@ -7,12 +7,12 @@ const partnershipList = document.querySelectorAll(".partnership__m__list");
 const onlineList = document.querySelectorAll(".community__m__list");
 const recruitList = document.querySelectorAll(".recruit__m__list");
 // arrow 버튼
-const serviceBtn = arrowBtn.item(1);
-const companyBtn = arrowBtn.item(2);
-const corporateBtn = arrowBtn.item(3);
-const partnershipBtn = arrowBtn.item(4);
-const onlineBtn = arrowBtn.item(5);
-const recruitBtn = arrowBtn.item(6);
+const serviceBtn = arrowBtn.item(0);
+const companyBtn = arrowBtn.item(1);
+const corporateBtn = arrowBtn.item(2);
+const partnershipBtn = arrowBtn.item(3);
+const onlineBtn = arrowBtn.item(4);
+const recruitBtn = arrowBtn.item(5);
 
 serviceBtn.addEventListener("click", () => {
   for (let i = 0; i < serviceList.length; i++) {

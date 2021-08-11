@@ -29,9 +29,7 @@ function goToSlide(idx) {
     slideImage.classList.add("animated");
     slideImage.style.left = originLeft - 839.5 * idx + "px";
   }
-  // console.log(slideImage.offsetLeft);
   currentIndex = idx;
-  // console.log(currentIndex);
 }
 
 // 오른쪽으로 이동
@@ -207,7 +205,7 @@ function moveIcon() {
 
 moveIcon();
 changeFirstIcon();
-// loopSlide();
+loopSlide();
 
 noticeBtn.addEventListener("click", showSlide);
 noticeBtn.addEventListener("click", startSlide);

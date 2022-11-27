@@ -48,7 +48,7 @@
 
 * {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -72,6 +72,13 @@ button {
 
 button:hover {
   text-decoration: underline;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: var(--color-black);
 }
 
 /* Js class */
@@ -153,7 +160,7 @@ button:hover {
 }
 
 .small__nav__items::after {
-  content: " ";
+  content: ' ';
   position: absolute;
   background-color: var(--color-light-grey);
   width: 1px;
@@ -281,7 +288,7 @@ button:hover {
 }
 
 .tab__bottom {
-  background-image: url("image/tap/gnb_sub_txbg.jpeg");
+  background-image: url('image/tap/gnb_sub_txbg.jpeg');
   width: 100%;
   height: 20%;
   display: inline-block;
@@ -356,6 +363,14 @@ button:hover {
   z-index: 999;
 }
 
+.close__badge {
+  cursor: pointer;
+}
+
+.close {
+  opacity: 0;
+}
+
 .badge img {
   width: 80%;
 }
@@ -391,7 +406,7 @@ button:hover {
 }
 
 .New__menu__bg {
-  background-image: url("image/new__menu/2021_summer2_bg.jpeg");
+  background-image: url('image/new__menu/2021_summer2_bg.jpeg');
   height: 646px;
   background-position: 35% top;
   background-size: cover;
@@ -640,21 +655,21 @@ button:hover {
   right: 20px;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   display: none;
 }
 
-input[type="checkbox"] + label {
+input[type='checkbox'] + label {
   display: inline-block;
   width: 12px;
   height: 12px;
-  background-image: url("image/Slide/main_prom_off.png");
+  background-image: url('image/Slide/main_prom_off.png');
   margin-left: 10px;
   cursor: pointer;
 }
 
-input[type="checkbox"]:checked + label {
-  background-image: url("image/Slide/main_prom_on.png");
+input[type='checkbox']:checked + label {
+  background-image: url('image/Slide/main_prom_on.png');
 }
 
 /* Rewards  */
@@ -721,7 +736,7 @@ input[type="checkbox"]:checked + label {
 }
 
 .e-gift::before {
-  content: " ";
+  content: ' ';
   position: absolute;
   background-color: var(--color-line);
   height: 1px;
@@ -745,7 +760,7 @@ input[type="checkbox"]:checked + label {
 
 /* Papua__coffee */
 .Papua__coffee__bg {
-  background-image: url("image/Papua__coffee/2021_summer2_bean_bg.jpeg");
+  background-image: url('image/Papua__coffee/2021_summer2_bean_bg.jpeg');
   height: 571px;
   background-position: 50% top;
   background-size: cover;
@@ -813,7 +828,7 @@ input[type="checkbox"]:checked + label {
 /* Brazil__coffee */
 .Brazil__coffee {
   height: 392px;
-  background-image: url("image/Brazil__coffee/reserve_sundried_brazil_bg2.jpeg");
+  background-image: url('image/Brazil__coffee/reserve_sundried_brazil_bg2.jpeg');
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -852,7 +867,7 @@ input[type="checkbox"]:checked + label {
 
 /* Pick__menu */
 .Pick__menu__bg {
-  background-image: url("image/Pick__menu/fav_prod_bg_new.jpg");
+  background-image: url('image/Pick__menu/fav_prod_bg_new.jpg');
   height: 790px;
   background-attachment: fixed;
   position: relative;
@@ -922,7 +937,7 @@ input[type="checkbox"]:checked + label {
 }
 
 .Reserve__img::before {
-  content: "";
+  content: '';
   position: absolute;
   background-color: var(--color-line);
   height: 1px;
@@ -942,7 +957,7 @@ input[type="checkbox"]:checked + label {
 }
 
 .Reserve__img::after {
-  content: "";
+  content: '';
   position: absolute;
   background-color: var(--color-line);
   height: 90%;
@@ -1194,7 +1209,7 @@ input[type="checkbox"]:checked + label {
 }
 
 .tac__list::before {
-  content: "";
+  content: '';
   position: absolute;
   height: 13px;
   width: 1px;
@@ -2012,7 +2027,7 @@ input[type="checkbox"]:checked + label {
 
   /* New__menu */
   .New__menu__bg {
-    background-image: url("image/new__menu/2021_m_summer2_bg.jpeg");
+    background-image: url('image/new__menu/2021_m_summer2_bg.jpeg');
     height: 250vw;
     background-size: cover;
   }
@@ -2212,7 +2227,7 @@ input[type="checkbox"]:checked + label {
   /* Papua__coffee */
   .Papua__coffee__bg {
     height: 1150px;
-    background-image: url("image/Papua__coffee/2021_m_summer2_bean_bg.jpeg");
+    background-image: url('image/Papua__coffee/2021_m_summer2_bean_bg.jpeg');
     background-position: center;
     background-repeat: no-repeat;
   }
